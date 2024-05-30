@@ -1,3 +1,67 @@
-.Club{
+body{
+    margin: 0px;
+    font-family: "Rubik", sans-serif;    
+}
+
+.content {
+    padding-top: 65px;
+}
+
+.titlesection {
+    background-color: gray;
+    padding: 20px;
+    height: 700px;
+    display: flex;
+}
+
+.maintitle{
     text-align: center;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    font-size: 90px;
+    color: white;
+    text-shadow: white 0 0 7dvw;
+    letter-spacing: 4px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+
+.header {
+    background: #91c9f9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-top: 5px;
+}
+
+#logoimage {
+    position: fixed;
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 7px;
+    box-shadow: #4a4c58 0 0 7px 1px;
+    transition: box-shadow .1s ease-in-out, height .1s ease-in-out;
+    border-radius: 5px;
+}
+
+#logoimage:hover {
+    box-shadow: #91949f 0 0 10px 1px;
+    height: 83px;
+    cursor: pointer;
+}
+
+.headeritem {
+    color: white;
+    justify-self: center;
+    align-self: center;
+    padding: 12px;
+    font-size: 20px;
 }
