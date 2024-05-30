@@ -1,6 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
 body{
     margin: 0px;
-    font-family: "Rubik", sans-serif;    
+    font-family: "Rubik", sans-serif;
 }
 
 .content {
@@ -8,10 +11,12 @@ body{
 }
 
 .titlesection {
-    background-color: gray;
-    padding: 20px;
-    height: 700px;
+    height: 800px;
     display: flex;
+    background-image: url(resources/school\ 3000x2000.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .maintitle{
@@ -21,15 +26,63 @@ body{
     width: 100%;
     font-size: 90px;
     color: white;
-    text-shadow: white 0 0 7dvw;
+    text-shadow: rgb(43, 52, 96) 0 0 20px;
     letter-spacing: 4px;
     
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
+}
+
+.break {
+    width: 100%;
+    display: block;
+    height: 5px;
+    z-index: 5;
+}
+
+.section {
+    display: block;
+    padding: 20px;
+}
+.sectiontitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-self: center;
+    text-align: center;
+    width: 100vw;
+    font-size: 50px;
+    color: whitesmoke;
+    letter-spacing: 4px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.sectioncontent {
+    display: flex;
+    color: whitesmoke;
+    font-size: 20px;
+}
+.wintercarnival {
+    height: 600px;
+    background-color: gray;
+}
+.fivek {
+    height:600px;
+    background-image: url(resources/5kbackground.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#winterbanner {
+    height: 470px;
+    border: 2px solid white;
+}
+#fiveklogo {
+    height: 300px;
 }
 
 .header {
-    background: #91c9f9;
+    background: #91cfff;
     position: fixed;
     top: 0;
     width: 100%;
@@ -39,6 +92,7 @@ body{
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     padding-top: 5px;
+    z-index: 10;
 }
 
 #logoimage {
@@ -50,6 +104,7 @@ body{
     box-shadow: #4a4c58 0 0 7px 1px;
     transition: box-shadow .1s ease-in-out, height .1s ease-in-out;
     border-radius: 5px;
+    z-index: 10;
 }
 
 #logoimage:hover {
@@ -64,4 +119,15 @@ body{
     align-self: center;
     padding: 12px;
     font-size: 20px;
+    text-shadow: rgb(222, 222, 222) 0 0 5px;
+    transition: all .1s ease-in-out;
+}
+.headeritem:hover {
+    cursor: pointer;
+    font-size: 22px;
+    text-shadow: rgb(157, 157, 157) 0 0 5px;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
