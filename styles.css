@@ -53,6 +53,7 @@ body{
     font-size: 50px;
     color: whitesmoke;
     letter-spacing: 4px;
+    text-shadow: #57585d 0 0 10px;
     
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -61,10 +62,14 @@ body{
     display: flex;
     color: whitesmoke;
     font-size: 20px;
+    text-shadow: #202022 0 0 10px;
 }
 .wintercarnival {
     height: 600px;
-    background-color: gray;
+    background-image: url(resources/wintercarnival\ background\ TEMP.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 .fivek {
     height:600px;
@@ -95,21 +100,24 @@ body{
     z-index: 10;
 }
 
-#logoimage {
+#logo {
+    --logo-size: 80px;
+    --logo-hover-size: 83px;
+
     position: fixed;
-    height: 80px;
+    height: var(--logo-size);
     left: 50%;
     transform: translateX(-50%);
     top: 7px;
-    box-shadow: #4a4c58 0 0 7px 1px;
+    box-shadow: #70727e 0 0 7px 1px;
     transition: box-shadow .1s ease-in-out, height .1s ease-in-out;
     border-radius: 5px;
     z-index: 10;
 }
 
-#logoimage:hover {
+#logo:hover {
     box-shadow: #91949f 0 0 10px 1px;
-    height: 83px;
+    height: var(--logo-hover-size);
     cursor: pointer;
 }
 
