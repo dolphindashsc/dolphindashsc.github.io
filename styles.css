@@ -71,6 +71,13 @@ body{
     background-attachment: fixed;
     background-position: center;
 }
+.about {
+    height: 800px;
+    background-image: url(resources/team.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
 .fivek {
     height:600px;
     background-image: url(resources/5kbackground.png);
