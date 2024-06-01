@@ -1,0 +1,28 @@
+.wintercarnival {
+    height: 600px;
+    background-image: url(.resources/wintercarnival\ background\ TEMP.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.about {
+    height: 800px;
+    background-image: url(.resources/team.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.fivek {
+    height:600px;
+    background-image: url(.resources/5kbackground.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#winterbanner {
+    height: 470px;
+    border: 2px solid white;
+}
+#fiveklogo {
+    height: 300px;
+}

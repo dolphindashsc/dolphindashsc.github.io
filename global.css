@@ -13,7 +13,7 @@ body{
 .titlesection {
     height: 800px;
     display: flex;
-    background-image: url(resources/school\ 3000x2000.png);
+    background-image: url(.resources/school\ 3000x2000.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -64,34 +64,6 @@ body{
     font-size: 20px;
     text-shadow: #202022 0 0 10px;
 }
-.wintercarnival {
-    height: 600px;
-    background-image: url(resources/wintercarnival\ background\ TEMP.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-.about {
-    height: 800px;
-    background-image: url(resources/team.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-.fivek {
-    height:600px;
-    background-image: url(resources/5kbackground.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-#winterbanner {
-    height: 470px;
-    border: 2px solid white;
-}
-#fiveklogo {
-    height: 300px;
-}
 
 .header {
     background: #91cfff;
@@ -136,6 +108,7 @@ body{
     font-size: 20px;
     text-shadow: rgb(222, 222, 222) 0 0 5px;
     transition: all .1s ease-in-out;
+    text-decoration: none;
 }
 .headeritem:hover {
     cursor: pointer;
@@ -143,6 +116,6 @@ body{
     text-shadow: rgb(157, 157, 157) 0 0 5px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
