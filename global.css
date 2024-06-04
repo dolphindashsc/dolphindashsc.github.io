@@ -106,16 +106,39 @@ body{
     align-self: center;
     padding: 12px;
     font-size: 20px;
-    text-shadow: rgb(222, 222, 222) 0 0 5px;
+    text-shadow: rgb(83, 83, 83) 1px 1px 2px;
     transition: all .1s ease-in-out;
     text-decoration: none;
 }
 .headeritem:hover {
     cursor: pointer;
     font-size: 22px;
-    text-shadow: rgb(157, 157, 157) 0 0 5px;
+    text-shadow: rgb(78, 78, 78) 0 0 5px;
 }
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+#downarrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+
+    stroke: rgb(0, 0, 0);
+    stroke-width: 3;
+    stroke-dasharray: none;
+    stroke-linecap: round;
+    stroke-dashoffset: 0;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 4;
+    fill: rgb(255,255,255);
+    fill-opacity: 0;
+    fill-rule: nonzero;
+
+    z-index: 15;
+}
+#downarrow:hover {
+    cursor: pointer;
 }
