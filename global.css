@@ -10,15 +10,6 @@ body{
     padding-top: 65px;
 }
 
-.titlesection {
-    height: 800px;
-    display: flex;
-    background-image: url(resources/school\ 3000x2000.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-
 .maintitle{
     text-align: center;
     justify-self: center;

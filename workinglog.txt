@@ -6,4 +6,4 @@
 5-31-24:
     henry: 1 hour
 6-3-24:
-    henry: ~20 minutes + 
+    henry: ~30 minutes

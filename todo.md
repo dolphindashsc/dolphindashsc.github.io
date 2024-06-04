@@ -1,5 +1,5 @@
 **todo:**
-- about
+- about (doing)
 - past years
     - list the years here once get around to it ig
 - sponsors
