@@ -1,15 +1,18 @@
 body {
     margin: 0;
 
-    font-family: "Moderustic", sans-serif;
+    font-family: "Century Gothic", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+
+    overflow-x: hidden;
 }
 
 header {
-   position: fixed;
-   width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 .headerinner {
@@ -120,7 +123,7 @@ a {
     font-size: 70px;
     font-weight: 500;    
 
-    animation: 1.5s cubic-bezier(.31,1.49,.6,.93) 0s 1 mainLettersShowRest;
+    animation: 1.5s ease-in-out 0s 1 mainLettersShowRest;
 
     color :white;
 
@@ -134,7 +137,7 @@ a {
     font-size: 70px;
     color :white;
 
-    animation: 1.7s cubic-bezier(.31,1.49,.6,.93) 0s 1 otherletters;
+    animation: 1.7s ease-in-out 0s 1 otherletters;
 }
 
 @keyframes mainLettersShowRest 
@@ -171,11 +174,13 @@ a {
 .whowearecontainer {
     width: 100%;
     height: 60vh;
+    box-sizing: border-box;
 }
 
 .whoweareinner {
     padding: 50px;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .whowearetitle {
@@ -187,10 +192,70 @@ a {
 }
 
 .whowearecontent {
-    padding-left: 200px;
+    padding-left: 230px;
 }
 
 .eventscontainer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 80vh;
+    height: fit-content;
+
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.eventstitle {
+    font-size: 40px;
+    
+    width: 100%;
+    height:fit-content;
+    text-align: center;
+}
+
+.eventscontentscontainer {
+    position: relative;
+    left: 0px;
+    height: 60vh;
+    width: 200%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.eventsnavigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.eventnavitem {
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.eventnavitemselected {
+    background-color: black;
+}
+
+.eventnavitem:hover {
+    cursor: pointer;
+}
+
+.eventitem {
+    width: 100%;
+    height: 100%;
+}
+
+#5k {
+    width: var()
+}
+
+#winter {
+    opacity: 0;
 }
