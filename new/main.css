@@ -156,7 +156,8 @@ a {
     }
 }
 
-@keyframes otherletters {
+@keyframes otherletters
+{
     0% {
         font-size: 0px;
         font-weight: 400;
@@ -250,12 +251,15 @@ a {
 .eventitem {
     width: 100%;
     height: 100%;
-}
 
-#5k {
-    width: var()
+    padding: 30px;
 }
 
 #winter {
     opacity: 0;
+}
+
+
+#fivek {
+    opacity: 1;
 }
