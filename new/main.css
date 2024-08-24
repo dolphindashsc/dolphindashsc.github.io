@@ -13,6 +13,13 @@ header {
     position: fixed;
     width: 100%;
     z-index: 10;
+    top: 0px;
+
+    transition: .2s ease-out top;
+}
+
+.headerscrolling {
+    top: -100px;
 }
 
 .headerinner {
@@ -218,10 +225,13 @@ a {
     position: relative;
     left: 0px;
     height: 60vh;
-    width: 200%;
+    width: 100%;
 
-    display: flex;
-    flex-direction: row;
+    cursor: pointer;
+}
+
+.eventscontentscontainer:active {
+    cursor: grabbing;
 }
 
 .eventsnavigation {
@@ -233,8 +243,8 @@ a {
 
 .eventnavitem {
     margin: 5px;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     background-color: transparent;
     border: 2px solid black;
     border-radius: 15px;
@@ -249,17 +259,24 @@ a {
 }
 
 .eventitem {
-    width: 100%;
+    position: absolute;
     height: 100%;
 
+    user-select: none;
+}
+
+.eventiteminner {
     padding: 30px;
 }
 
 #winter {
-    opacity: 0;
-}
+    opacity: 1;
 
+    background-color: blue;
+}
 
 #fivek {
     opacity: 1;
+
+    background-color: lime;
 }
