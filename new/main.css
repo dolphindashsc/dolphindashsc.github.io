@@ -204,6 +204,7 @@ a {
 }
 
 .eventscontainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -215,7 +216,8 @@ a {
 
 .eventstitle {
     font-size: 40px;
-    
+    padding: 5px;
+
     width: 100%;
     height:fit-content;
     text-align: center;
@@ -234,7 +236,7 @@ a {
     cursor: grabbing;
 }
 
-.eventsnavigation {
+.eventsnavigationbuttons {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -267,6 +269,26 @@ a {
 
 .eventiteminner {
     padding: 30px;
+}
+
+.eventnavarrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(45%);
+
+    width: 20px;
+    height: 50px;
+    z-index: 1;
+
+    cursor: pointer;
+}
+
+#eventnavarrowleft {
+    left: 15px; 
+}
+
+#eventnavarrowright {
+    right: 15px; 
 }
 
 #winter {

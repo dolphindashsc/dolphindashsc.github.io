@@ -56,7 +56,17 @@
         </div>
     </div>
     <div class="eventscontainer">
-        <span class="eventstitle">Events</span>
+        <div class="eventnavarrow" id="eventnavarrowleft">
+            <svg width="20" height="50" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="15,3 4,25 15,45" fill="none" stroke-width="6" stroke="black" stroke-linecap="round"></polyline>
+            </svg>
+        </div>
+        <div class="eventnavarrow" id="eventnavarrowright">
+            <svg width="20" height="50" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="4,3 15,25 4,45" fill="none" stroke-width="6" stroke="black" stroke-linecap="round"></polyline>
+            </svg>
+        </div>
+    <span class="eventstitle">Events</span>
         <div class="eventscontent">
             <div class="eventscontentscontainer">
                 <div class="eventitem" id="fivek">
@@ -70,10 +80,11 @@
                 
             </div>
         </div>
-        <div class="eventsnavigation">
-            <div class="eventnavitem eventnavitemselected" id="eventnav0"></div>
-            <div class="eventnavitem" id="eventnav1"></div>
+        <div class="eventsnavigationbuttons">
+            <div class="eventnavitem eventnavitemselected"></div>
+            <div class="eventnavitem"></div>
         </div>
+        
     </div>
 </body>
 </html>

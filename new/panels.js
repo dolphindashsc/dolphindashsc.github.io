@@ -10,6 +10,7 @@ var dragStartX = 0;
 var dragStartY = 0;
 
 var panels;
+var navIcons;
 
 var dragStartTargetX = 0;
 var targetX = 0;
@@ -18,8 +19,11 @@ var realX = 0;
 var width = 0;
 var midpoint = 0;
 
+var curSlide = 0;
+
 window.addEventListener("load", () => {
     panels = document.getElementsByClassName("eventitem");
+    navIcons = document.getElementsByClassName("eventnavitem");
     updatesizes();
 
     const events = document.getElementsByClassName("eventscontent")[0];
@@ -30,12 +34,39 @@ window.addEventListener("load", () => {
         dragStartY = curY;
         dragStartTargetX = targetX;
     });
+
+
+    for (let i = 0; i < navIcons.length; i++) {
+        navIcons[i].addEventListener("click", ()=>{
+            var before = curSlide;
+            curSlide = i;
+            updateNavIcons();
+
+            if (curSlide > before) targetX += width * (curSlide - before);
+            else if (curSlide < before) targetX -= width * (before - curSlide);
+        });
+    }
+
+    document.getElementById("eventnavarrowleft").addEventListener("click", ()=>{
+        curSlide = mod((curSlide - 1), panels.length);
+        updateNavIcons();
+        
+        targetX -= width;
+    });
+
+    document.getElementById("eventnavarrowright").addEventListener("click", ()=>{
+        curSlide = mod((curSlide + 1), panels.length);
+        updateNavIcons();
+        
+        targetX += width;
+    });
 });
 window.addEventListener("resize", updatesizes());
 
 function updatesizes() {
     if (!panels) return;
 
+    panels[0].style.width = "100%";
     width = panels[0].getBoundingClientRect().width;
     midpoint = document.body.clientWidth / 2;
 }
@@ -44,10 +75,19 @@ window.addEventListener("mouseup", function() {
     if (targetX - dragStartTargetX > dragOverThreshold) targetX = Math.ceil(targetX / width) * width;
     else if (targetX - dragStartTargetX < -dragOverThreshold) targetX = Math.floor(targetX / width) * width;
     else targetX = dragStartTargetX;
-    console.log(`enddrag ${targetX} width ${width}`);
+
+    if (Math.abs(targetX - dragStartTargetX) > 10) curSlide = mod(Math.round(targetX / width), panels.length);
+    updateNavIcons();
     
     dragging = false;
 });
+
+function updateNavIcons() {
+    for (let icon of navIcons) {
+        icon.classList.remove("eventnavitemselected");
+    }
+    navIcons[curSlide].classList.add("eventnavitemselected");
+}
 
 
 document.addEventListener('mousemove', function(event) {
@@ -55,10 +95,7 @@ document.addEventListener('mousemove', function(event) {
     curY = event.clientY;
 
     if (dragging) {
-
         targetX = dragStartTargetX + dragStartX - curX;    
-
-        console.log(targetX);
     }
 });
   
@@ -80,14 +117,12 @@ function recalculatePositions() {
     if (!panels) return;
 
     realX = lerp(realX, -targetX, smoothness);
-    console.log(realX);
-
     
     // https://www.desmos.com/calculator/qcjjhio8jw
-    for (let i = 0; i < panels.length; i++) {
+    for (let i = 1; i < panels.length + 1; i++) {
         let xPos = mod((realX + width * i), (panels.length * width)) - width;
-        panels[i].style.left = xPos+"px";
-        panels[i].style.width = width+"px";
+        panels[i - 1].style.left = xPos+"px";
+        panels[i - 1].style.width = width+"px";
         
         let opacity = 0;
         let offX = xPos - midpoint + width / 2; 
@@ -96,7 +131,7 @@ function recalculatePositions() {
         else {
             opacity = .5 * Math.cos((Math.PI * offX) / width) + .5;
         }  
-        panels[i].style.opacity = opacity;
+        panels[i - 1].style.opacity = opacity;
     }
 }
 
