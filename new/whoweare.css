@@ -1,0 +1,23 @@
+.whowearecontainer {
+    width: 100%;
+    height: 60vh;
+    box-sizing: border-box;
+}
+
+.whoweareinner {
+    padding: 50px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.whowearetitle {
+    position: sticky;
+    top: 300px;
+    padding: 5px;
+
+    font-size: 30px;
+}
+
+.whowearecontent {
+    padding-left: 230px;
+}

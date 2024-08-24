@@ -1,0 +1,98 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0px;
+
+    transition: .2s ease-out top;
+}
+
+.headerscrolling {
+    top: -100px;
+}
+
+.headerinner {
+    height: 200%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    border-radius: 10px;
+    background: white;
+
+    /*might replace later*/
+    box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;
+
+}
+
+.headeritem {
+    justify-self: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.progressbarmain {
+    width: 100%;
+    height: 7px;
+
+    display: grid;
+    justify-content: center;
+    transition: height .2s cubic-bezier(.4,1.68,.66,.82);
+}
+
+.progressbarmain:hover {
+    height: 40px;
+}
+
+.progressbarcontainer {
+    width: 95vw;
+    height: 100%;
+    border-radius: 0 0 5px 5px;
+    background-color: #b2c9f8;
+    position: relative;
+}
+
+.progressbarfill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 10%;
+    height: 100%;
+    border-radius: 0 0 5px 5px;
+    background-color: #f77;
+}
+
+.progressbartextcontainer {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    width: 100%;
+
+    background: linear-gradient(90deg, #b2c9f8 10%, #f77 10%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.progressbartext {
+    top: 0;
+    left: 0;
+    margin: 5px;
+
+    color: transparent;
+    font-weight: 500;
+    font-size: 25px;
+}
