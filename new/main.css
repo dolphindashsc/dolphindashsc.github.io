@@ -1,10 +1,27 @@
 body {
+    --primary-color: hsl(200, 100%, 96%);
+    --primary-tint: hsl(200, 83%, 91%);
+    --primary-dark: hsl(200, 50%, 50%);
+    --text-color: #2d3436;
+    --main-radius: 20px;
+    --sidepadding: 7vw;
+    --largetextsize: 40px;
+    
     margin: 0;
 
     font-family: "Century Gothic", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: -.2px;
+    font-size: 18px;
+    color: var(--text-color);
 
     overflow-x: hidden;
+
+    background-color: var(--primary-color);
+}
+
+hr {
+    width: 95%;
 }

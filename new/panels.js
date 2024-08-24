@@ -1,3 +1,5 @@
+// there is defo better way to do this but i couldn't find a tutorial so heres some bad code
+
 const dragOverThreshold = 100;
 const smoothness = .2;
 

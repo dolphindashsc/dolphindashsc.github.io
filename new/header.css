@@ -17,8 +17,8 @@ header {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(1, 1fr);
 
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 15px;
 
     padding-left: 10px;
@@ -26,8 +26,8 @@ header {
     padding-top: 15px;
     padding-bottom: 15px;
     
-    border-radius: 10px;
-    background: white;
+    border-radius: var(--main-radius);
+    background: var(--primary-color);
 
     /*might replace later*/
     box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;
@@ -56,7 +56,7 @@ a {
 }
 
 .progressbarcontainer {
-    width: 95vw;
+    width: 90vw;
     height: 100%;
     border-radius: 0 0 5px 5px;
     background-color: #b2c9f8;
@@ -88,11 +88,15 @@ a {
 }
 
 .progressbartext {
-    top: 0;
-    left: 0;
     margin: 5px;
 
     color: transparent;
     font-weight: 500;
     font-size: 25px;
+
+    opacity: 0;
+}
+
+.progressbarmain:hover > .progressbartext {
+    opacity: 1;
 }

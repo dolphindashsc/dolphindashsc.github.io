@@ -5,6 +5,7 @@
 }
 
 .whoweareinner {
+    position: relative;
     padding: 50px;
     height: 100%;
     box-sizing: border-box;
@@ -15,9 +16,20 @@
     top: 300px;
     padding: 5px;
 
-    font-size: 30px;
+    font-size: var(--largetextsize);
 }
 
 .whowearecontent {
-    padding-left: 230px;
+    position: absolute;
+    top: 40px;
+    padding-left: 350px;
+    padding-right: var(--sidepadding);
+}
+
+.whowearecontent p {
+    background-color: var(--primary-tint);
+    padding: 20px;
+
+    border-radius: var(--main-radius);
+    border: solid 1.5px var(--primary-dark);
 }
