@@ -123,6 +123,7 @@ document.addEventListener('wheel', function(event) {
 
 document.addEventListener('scroll', function() {
     const x = window.scrollY;
+    console.log(x);
 
     const whowearetitle = document.getElementsByClassName("whowearetitle")[0];
 
@@ -146,6 +147,10 @@ document.addEventListener('scroll', function() {
     else { opacity = 0; }
 
     whowearetitle.style.opacity = opacity;
+
+    if (x > 1400) {
+        document.getElementById("charitytitlename").classList.add("charitytitlenamescrolled");
+    }
 
     /*
     const headerinner = document.getElementsByClassName("headerinner")[0];

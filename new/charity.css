@@ -1,4 +1,7 @@
 .charitycontainer {
+    margin-top: 50px;
+    background-color: var(--text-color);
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
 
@@ -17,18 +20,13 @@
     font-size: var(--largertextsize);
 }
 
-.charitytitlename {
-
-}
-
 #charitytitlename {
-    right: 0px;
-    transition: .5s linear all;
+    color: var(--progressbarsecondary);
+    font-size: 0;
+    font-weight: 400;
+    transition: .5s ease-in-out all;
 }
 
 .charitytitlenamescrolled {
-    position: absolute;
-    transform: rotate(90deg);
-    right: 30px;
-    top: 100px;
+    font-size: var(--largertextsize) !important;
 }

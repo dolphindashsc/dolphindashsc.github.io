@@ -5,6 +5,7 @@ body {
     --text-color: #2d3436;
     --main-radius: 20px;
     --sidepadding: 7vw;
+    --normaltextsize: 18px;
     --largertextsize: 40px;
 
     --progressbarprogress: 0%;
@@ -14,12 +15,12 @@ body {
     
     margin: 0;
 
-    font-family: "Century Gothic", sans-serif;
+    font-family: "Bahnschrift", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     letter-spacing: -.2px;
-    font-size: 18px;
+    font-size: var(--normaltextsize);
     color: var(--text-color);
 
     overflow-x: hidden;

@@ -24,7 +24,7 @@ header {
     padding-right: 30px;
     
     /*border-radius: var(--main-radius);*/
-    background: var(--primary-color);
+    background: white;
 
     /*might replace later*/
     /*box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;*/
@@ -37,7 +37,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
+    padding-top: 5px;
+
     height: 100%;
 }
 

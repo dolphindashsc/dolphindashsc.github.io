@@ -14,7 +14,7 @@
 .whowearetitle {
     position: sticky;
     top: 300px;
-    padding: 5px;
+    padding: 20px;
 
     font-size: var(--largertextsize);
 }
