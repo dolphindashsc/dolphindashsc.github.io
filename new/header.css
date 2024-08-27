@@ -20,8 +20,8 @@ header {
     //margin-top: 15px;
     */
     
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     
     /*border-radius: var(--main-radius);*/
     background: var(--primary-color);
@@ -33,12 +33,50 @@ header {
     align-items: center;
 }
 
-.headeritem {
-    justify-self: center;
+.headeritems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
 }
 
-a {
+#headerlogocontainer {
+    height: 80%;
+    width: auto;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#headerlogo {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 5px;
+}
+
+.headeritem {
+    justify-self: center;
+    margin: 15px;
     text-decoration: none;
+    color: var(--text-color);
+}
+
+.supportthecause {
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--text-color);
+
+    border-radius: var(--main-radius);
+
+    transition: .2s ease-in-out background-color;
+}
+
+.supportthecause:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: solid 1px var(--text-color);
 }
 
 .progressbarmain {
@@ -47,10 +85,10 @@ a {
 
     display: grid;
     justify-content: center;
-    transition: height .2s cubic-bezier(.4,1.68,.66,.82);
+    transition: height .2s ease-out;
 }
 
-.progressbarmain:hover {
+.progressbarmainhover {
     height: 40px;
 }
 
@@ -67,10 +105,20 @@ a {
     top: 0;
     left: 0;
     
-    width: 10%;
+    animation: 1.5s cubic-bezier(.17,.67,.16,1.21) 0s 1 progressanim;
+    width: var(--progressbarprogress);
     height: 100%;
     border-radius: 0 0 5px 5px;
     background-color: #f77;
+}
+
+@keyframes progressanim {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--progressbarprogress);
+    }
 }
 
 .progressbartextcontainer {
