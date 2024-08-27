@@ -12,26 +12,25 @@ header {
 }
 
 .headerinner {
-    height: 200%;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    height: 8vh;
+    display: flex;
 
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 15px;
-
+    /*margin-left: 20px;
+    //margin-right: 20px;
+    //margin-top: 15px;
+    */
+    
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
     
-    border-radius: var(--main-radius);
+    /*border-radius: var(--main-radius);*/
     background: var(--primary-color);
 
     /*might replace later*/
     box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;
 
+    justify-content: space-between;
+    align-items: center;
 }
 
 .headeritem {
@@ -95,8 +94,6 @@ a {
     font-size: 25px;
 
     opacity: 0;
-}
 
-.progressbarmain:hover > .progressbartext {
-    opacity: 1;
+    transition: .1s ease-in opacity;
 }

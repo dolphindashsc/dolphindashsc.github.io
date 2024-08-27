@@ -1,3 +1,16 @@
+window.addEventListener("load", ()=> {
+    const pbarmain = document.getElementsByClassName("progressbarmain")[0];
+    const pbartext = document.getElementsByClassName("progressbartext")[0];
+
+    pbarmain.addEventListener("mouseover", ()=>{
+        pbartext.style.opacity = "1";
+    });
+
+    pbarmain.addEventListener("mouseout", ()=>{
+        pbartext.style.opacity = "0";
+    });
+});
+
 document.addEventListener('wheel', function(event) {
     const delta = event.deltaY;
 
@@ -10,7 +23,6 @@ document.addEventListener('wheel', function(event) {
         header.classList.add("headerscrolling");
     }
 });
-
 
 document.addEventListener('scroll', function() {
     const x = window.scrollY;
