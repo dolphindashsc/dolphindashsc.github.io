@@ -1,6 +1,6 @@
 .charitycontainer {
     margin-top: 50px;
-    background-color: var(--text-color);
+    background-color: var(--primary-dark);
     color: var(--primary-color);
     display: flex;
     flex-direction: column;

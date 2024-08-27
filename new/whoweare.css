@@ -21,16 +21,21 @@
 
 .whowearecontent {
     position: absolute;
-    top: 40px;
+    top: 0px;
+    height: 100%;
     padding-left: 350px;
     padding-right: var(--sidepadding);
+
+    display: flex;
 }
 
 .whowearecontent p {
     background-color: var(--primary-tint);
     padding: 20px;
 
+    align-self: center;
+
     border-radius: var(--main-radius);
-    box-shadow: 0 0 20px 5px var(--primary-tint);
+    box-shadow: 0 0 20px 20px var(--primary-tint);
     //border: solid 1.5px var(--primary-dark);
 }
