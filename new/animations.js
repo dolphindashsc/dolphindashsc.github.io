@@ -53,6 +53,9 @@ window.addEventListener("load", ()=> {
         logo.style.transform = "";
         logo.style.boxShadow = "";
     });
+
+    const pbarfill = document.getElementsByClassName("progressbarfill")[0];
+    pbarfill.style.width = getComputedStyle(document.body).getPropertyValue("--progressbarprogress");
 });
 
 function rotationToAxisAngle(xAngle, yAngle) {
@@ -143,6 +146,23 @@ document.addEventListener('scroll', function() {
     else { opacity = 0; }
 
     whowearetitle.style.opacity = opacity;
+
+    /*
+    const headerinner = document.getElementsByClassName("headerinner")[0];
+    const pbar = document.getElementsByClassName("progressbarcontainer")[0];
+    const pbarfill = document.getElementsByClassName("progressbarfill")[0];
+
+    if (x < 20) {
+        headerinner.style.background = "transparent";
+        pbar.style.borderRadius = "5px";
+        pbarfill.style.borderRadius = "5px";
+    }
+    else {
+        headerinner.style.background = "var(--primary-color)";
+        pbar.style.borderRadius = "0 0 5px 5px";
+        pbarfill.style.borderRadius = "0 0 5px 5px";
+    }
+        */
 });
 
 document.addEventListener('mousemove', (event) => {

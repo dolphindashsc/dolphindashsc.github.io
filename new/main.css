@@ -7,7 +7,10 @@ body {
     --sidepadding: 7vw;
     --largertextsize: 40px;
 
-    --progressbarprogress: 10%;
+    --progressbarprogress: 0%;
+    --progressbarsize: 95vw;
+    --progressbarprimary: #f77;
+    --progressbarsecondary: #b2c9f8;
     
     margin: 0;
 

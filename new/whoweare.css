@@ -31,5 +31,6 @@
     padding: 20px;
 
     border-radius: var(--main-radius);
-    border: solid 1.5px var(--primary-dark);
+    box-shadow: 0 0 20px 5px var(--primary-tint);
+    //border: solid 1.5px var(--primary-dark);
 }

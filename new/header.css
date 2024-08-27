@@ -27,7 +27,7 @@ header {
     background: var(--primary-color);
 
     /*might replace later*/
-    box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;
+    /*box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;*/
 
     justify-content: space-between;
     align-items: center;
@@ -36,13 +36,14 @@ header {
 .headeritems {
     display: flex;
     flex-direction: row;
-    align-items: center;
-
+    justify-content: center;
+    
+    height: 100%;
 }
 
 #headerlogocontainer {
     height: 80%;
-    width: auto;
+    aspect-ratio: 1 / 1;
 
     border-radius: 5px;
     cursor: pointer;
@@ -51,13 +52,29 @@ header {
 #headerlogo {
     height: 100%;
     width: 100%;
+    aspect-ratio: 1 / 1;
 
     border-radius: 5px;
+
+    transition: .1s linear all;
 }
 
 .headeritem {
-    justify-self: center;
-    margin: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin: 0 15px 0 15px;
+    height: 100%;
+    border-bottom: 2px solid transparent;
+    transition: .1s ease-in-out border;
+}
+
+.headeritem:hover {
+    border-bottom: 2px solid var(--text-color);
+}
+
+.headeritem a {
+    height: fit-content;
     text-decoration: none;
     color: var(--text-color);
 }
@@ -85,7 +102,7 @@ header {
 
     display: grid;
     justify-content: center;
-    transition: height .2s ease-out;
+    transition: height .1s ease-out;
 }
 
 .progressbarmainhover {
@@ -93,11 +110,13 @@ header {
 }
 
 .progressbarcontainer {
-    width: 90vw;
+    width: var(--progressbarsize);
     height: 100%;
     border-radius: 0 0 5px 5px;
     background-color: #b2c9f8;
     position: relative;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
 
 .progressbarfill {
@@ -105,20 +124,11 @@ header {
     top: 0;
     left: 0;
     
-    animation: 1.5s cubic-bezier(.17,.67,.16,1.21) 0s 1 progressanim;
-    width: var(--progressbarprogress);
+    transition: 1s cubic-bezier(.17,.67,.16,1.21);
+    width: 0%;
     height: 100%;
-    border-radius: 0 0 5px 5px;
-    background-color: #f77;
-}
-
-@keyframes progressanim {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: var(--progressbarprogress);
-    }
+    border-radius: 0 5px 5px 5px;
+    background-color: var(--progressbarprimary);
 }
 
 .progressbartextcontainer {
@@ -129,7 +139,7 @@ header {
     position: absolute;
     width: 100%;
 
-    background: linear-gradient(90deg, #b2c9f8 10%, #f77 10%);
+    background: linear-gradient(90deg, var(--progressbarsecondary) var(--progressbarprogress), #f77 10%);
     background-clip: text;
     -webkit-background-clip: text;
 }
