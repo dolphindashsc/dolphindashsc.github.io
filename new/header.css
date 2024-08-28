@@ -24,7 +24,7 @@ header {
     padding-right: 30px;
     
     /*border-radius: var(--main-radius);*/
-    background: white;
+    background: var(--primary-color);
 
     /*might replace later*/
     /*box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;*/
@@ -37,7 +37,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 5px;
 
     height: 100%;
 }
@@ -66,6 +65,7 @@ header {
     align-items: center;
     margin: 0 15px 0 15px;
     height: 100%;
+    border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
     transition: .1s ease-in-out border;
 }
@@ -157,7 +157,7 @@ header {
     transition: .1s ease-in opacity;
 }
 
-.themeswitcher {
+#themeswitcher {
     position: fixed;
     display: grid;
 
@@ -165,7 +165,7 @@ header {
     right: 15px;
     width: 30px;
     height: 30px;
-    background-color: ivory;
+    background-color: var(--primary-dark);
     border-radius: 50px;
 
     z-index: 10;
@@ -174,14 +174,14 @@ header {
     transition: .1s ease-out all;
 }
 
-.themeswitcher:hover {
+#themeswitcher:hover {
     width: 32px;
     height: 32px;
 }
 
-.themeswitcher img {
-    width: 95%;
-    height: 95%;
+#themeswitcher img {
+    width: 80%;
+    height: 80%;
     align-self: center;
     justify-self: center;
 

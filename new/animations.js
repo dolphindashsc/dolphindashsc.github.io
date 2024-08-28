@@ -1,7 +1,11 @@
 const tiltCoef = 1;
 const tiltShadowOffset = 3;
 
+var darkmode = false;
+
 window.addEventListener("load", ()=> {
+    updateDarkmodeProperties();
+
     const pbarmain = document.getElementsByClassName("progressbarmain")[0];
     const pbartext = document.getElementsByClassName("progressbartext")[0];
 
@@ -24,6 +28,13 @@ window.addEventListener("load", ()=> {
             pbartext.style.opacity = "0";
         }, 2000);
     }, 1500);
+
+    // night mode
+    const themeswitcher = document.getElementById("themeswitcher");
+    themeswitcher.addEventListener("mousedown", ()=>{
+        darkmode = !darkmode;
+        updateDarkmodeProperties();
+    });
 
     // logo
     const logo = document.getElementById("headerlogo");
@@ -57,6 +68,24 @@ window.addEventListener("load", ()=> {
     const pbarfill = document.getElementsByClassName("progressbarfill")[0];
     pbarfill.style.width = getComputedStyle(document.body).getPropertyValue("--progressbarprogress");
 });
+
+function updateDarkmodeProperties() {
+    const computed = getComputedStyle(document.body);
+    const icon = document.getElementById("themeswitcher").getElementsByTagName("img")[0];
+    if (darkmode) {
+
+        icon.src="../resources/sun.svg";
+        document.body.style.setProperty("--primary-color", computed.getPropertyValue("--dark-primary-color"));
+        document.body.style.setProperty("--primary-tint", computed.getPropertyValue("--dark-primary-tint"));
+        document.body.style.setProperty("--primary-dark", computed.getPropertyValue("--dark-primary-dark"));
+    }
+    else {
+        icon.src="../resources/moon.svg";
+        document.body.style.setProperty("--primary-color", computed.getPropertyValue("--light-primary-color"));
+        document.body.style.setProperty("--primary-tint", computed.getPropertyValue("--light-primary-tint"));
+        document.body.style.setProperty("--primary-dark", computed.getPropertyValue("--light    -primary-dark"));
+    }
+}
 
 function rotationToAxisAngle(xAngle, yAngle) {
     // Convert angles to radians
