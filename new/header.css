@@ -156,3 +156,34 @@ header {
 
     transition: .1s ease-in opacity;
 }
+
+.themeswitcher {
+    position: fixed;
+    display: grid;
+
+    bottom: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: ivory;
+    border-radius: 50px;
+
+    z-index: 10;
+    cursor: pointer;
+
+    transition: .1s ease-out all;
+}
+
+.themeswitcher:hover {
+    width: 32px;
+    height: 32px;
+}
+
+.themeswitcher img {
+    width: 95%;
+    height: 95%;
+    align-self: center;
+    justify-self: center;
+
+    z-index: 11;
+}
