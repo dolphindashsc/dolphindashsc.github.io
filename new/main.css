@@ -5,15 +5,17 @@ body {
     --main-radius: 20px;
     --sidepadding: 7vw;
     --normaltextsize: 20px;
+    --mediumertextsize: 23px;
+    --mediumtextsize: 30px;
     --largertextsize: 40px;
 
     
     --light-primary-color: hsl(200, 100%, 96%);
-    --light-primary-tint: hsl(200, 83%, 91%);
+    --light-primary-tint: hsl(200, 100%, 90%);
     --light-primary-dark: #2d3436;
     
     --dark-primary-color: hsl(200, 100%, 10%);
-    --dark-primary-tint: hsl(200, 83%, 21%);
+    --dark-primary-tint: hsl(200, 100%, 15%);
     --dark-primary-dark: ivory;
 
     --progressbarprogress: 0%;

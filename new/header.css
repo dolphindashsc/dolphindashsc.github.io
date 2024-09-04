@@ -29,7 +29,7 @@ header {
     /*might replace later*/
     /*box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;*/
 
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -81,14 +81,22 @@ header {
 }
 
 .supportthecause {
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    color: var(--primary-color);
-    background-color: var(--primary-dark);
-
-    border-radius: var(--main-radius);
-
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    cursor: pointer;
+    
     transition: .2s ease-in-out background-color;
+}
+
+.supportthecause a {
+    align-self: center;
+    padding: 5px 20px 5px 20px;
+
+    text-decoration: none;
+    border-radius: var(--main-radius);
+    background-color: var(--primary-dark);
+    color: var(--primary-color);
 }
 
 .supportthecause:hover{
@@ -113,7 +121,7 @@ header {
 .progressbarcontainer {
     width: var(--progressbarsize);
     height: 100%;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
     background-color: #b2c9f8;
     position: relative;
 
@@ -128,7 +136,7 @@ header {
     transition: 1s cubic-bezier(.17,.67,.16,1.21);
     width: 0%;
     height: 100%;
-    border-radius: 0 5px 5px 5px;
+    border-radius: 5px;
     background-color: var(--progressbarprimary);
 }
 

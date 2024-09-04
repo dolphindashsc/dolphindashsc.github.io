@@ -63,7 +63,9 @@ window.addEventListener("load", () => {
         targetX += width;
     });
 });
-window.addEventListener("resize", updatesizes());
+window.addEventListener("resize", ()=>{
+    updatesizes();
+});
 
 function updatesizes() {
     if (!panels) return;

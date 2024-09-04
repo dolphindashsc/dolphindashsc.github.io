@@ -152,7 +152,7 @@ document.addEventListener('wheel', function(event) {
 
 document.addEventListener('scroll', function() {
     const x = window.scrollY;
-    console.log(x);
+    //console.log(x);
 
     const whowearetitle = document.getElementsByClassName("whowearetitle")[0];
 

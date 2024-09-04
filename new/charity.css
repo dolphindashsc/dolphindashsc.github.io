@@ -1,21 +1,21 @@
 .charitycontainer {
     margin-top: 50px;
-    background-color: var(--primary-dark);
+    background: linear-gradient(180deg, var(--primary-color) 0px, var(--primary-dark) 5px);
     color: var(--primary-color);
     display: flex;
     flex-direction: column;
 
     width: 100%;
-    height: 200vh;
+    height: 80vh;
 }
 
 .charitytitlecontainer {
-    position: absolute;
     display: flex;
     width: 100%;
     justify-content: center;
 
     margin-top: 50px;
+    margin-bottom: 20px;
 
     font-size: var(--largertextsize);
 }
@@ -29,4 +29,54 @@
 
 .charitytitlenamescrolled {
     font-size: var(--largertextsize) !important;
+}
+
+.charitycontentcontainer {
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px var(--sidepadding) 10px 30px;
+    height: 100%;
+}
+
+.charitycontentmenu {
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+}
+
+.charityselectedbar {
+    width: 3px;
+    height: 100%;
+
+}
+
+#charityselectedbarinner {
+    width: 100%;
+    position: absolute;
+    background-color: var(--primary-color);
+
+    border-radius: 3px;
+}
+
+.charityoption {
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    font-size: var(--mediumertextsize);
+    font-weight: 400;
+
+    margin: 10px;
+
+    cursor: pointer;
+}
+
+.charityoptionselected {
+    border-right: 3px solid var(--primary-color);    
+}
+
+.charitycontent {
+    padding: 15px 0 15px 25px;
 }

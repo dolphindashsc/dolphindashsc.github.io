@@ -26,7 +26,7 @@
     height: 60vh;
     width: 100%;
 
-    cursor: pointer;
+    cursor: grab;
 }
 
 .eventscontentscontainer:active {
@@ -91,14 +91,27 @@
     right: 3vw; 
 }
 
+.eventheader{
+    width: 100%;
+    text-align: center;
+    font-size: var(--mediumtextsize);
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.eventdate {
+    font-weight: 500;
+}
+
 #winter {
     opacity: 1;
 
-    background-color: blue;
+    background-color: rgb(182, 216, 255);
 }
 
 #fivek {
     opacity: 1;
 
-    background-color: lime;
+    background-color: rgb(128, 164, 255);
 }

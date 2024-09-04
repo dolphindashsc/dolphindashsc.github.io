@@ -23,19 +23,23 @@
     position: absolute;
     top: 0px;
     height: 100%;
+    padding-top: var(--sidepadding);
     padding-left: 350px;
     padding-right: var(--sidepadding);
 
     display: flex;
+    flex-direction: column;
+    
 }
 
 .whowearecontent p {
+    width: 100%;
     background-color: var(--primary-tint);
-    padding: 20px;
+    padding: 25px;
 
     align-self: center;
 
     border-radius: var(--main-radius);
-    box-shadow: 0 0 20px 20px var(--primary-tint);
+    box-shadow: 0 0 10px var(--primary-tint);
     //border: solid 1.5px var(--primary-dark);
 }
