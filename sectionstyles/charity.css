@@ -45,20 +45,30 @@
     flex-direction: column;
 
     justify-content: space-evenly;
+
+    padding-right: 20px;
 }
 
 .charityselectedbar {
     width: 3px;
     height: 100%;
-
+    position: relative;
 }
 
 #charityselectedbarinner {
+    top: 50px;
+    height: 100px;
+
     width: 100%;
     position: absolute;
     background-color: var(--primary-color);
 
     border-radius: 3px;
+
+    transition-delay: 0s, 500ms;
+    transition-property: top, height;
+
+    transition: 500ms all ease;
 }
 
 .charityoption {

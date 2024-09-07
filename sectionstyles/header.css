@@ -86,7 +86,6 @@ header {
     height: 100%;
     cursor: pointer;
     
-    transition: .2s ease-in-out background-color;
 }
 
 .supportthecause a {
@@ -97,9 +96,11 @@ header {
     border-radius: var(--main-radius);
     background-color: var(--primary-dark);
     color: var(--primary-color);
+    
+    transition: .2s ease-in-out background-color;
 }
 
-.supportthecause:hover{
+.supportthecause a:hover{
     background-color: var(--primary-color);
     color: var(--primary-dark);
     border: solid 1px var(--primary-dark);

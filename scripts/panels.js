@@ -2,6 +2,7 @@
 
 const dragOverThreshold = 100;
 const smoothness = .2;
+const targetFrameRate = 60;
 
 var dragging = false;
 
@@ -24,6 +25,8 @@ var midpoint = 0;
 var curSlide = 0;
 
 window.addEventListener("load", () => {
+    requestAnimationFrame(recalculatePositions);
+
     panels = document.getElementsByClassName("eventitem");
     navIcons = document.getElementsByClassName("eventnavitem");
     updatesizes();
@@ -117,10 +120,20 @@ function mod(n, m) {
   }
   
 
+// dt so animations play nice across fps
+var dt = 0;
+var lastUpdate = Date.now();
+
 function recalculatePositions() {
     if (!panels) return;
 
-    realX = lerp(realX, -targetX, smoothness);
+    let now = Date.now();
+    dt = (now - lastUpdate) / (1000 / targetFrameRate);
+    lastUpdate = now;
+
+    console.log(dt);
+
+    realX = lerp(realX, -targetX, smoothness * dt);
     
     // https://www.desmos.com/calculator/qcjjhio8jw
     for (let i = 1; i < panels.length + 1; i++) {
@@ -137,8 +150,7 @@ function recalculatePositions() {
         }  
         panels[i - 1].style.opacity = opacity;
     }
+
+    requestAnimationFrame(recalculatePositions);
 }
 
-setInterval(() => {
-    recalculatePositions();
-}, 15); // roughly 60+ fps
