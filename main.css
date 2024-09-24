@@ -4,13 +4,14 @@ body {
     --primary-dark: #2d3436;
     --main-radius: 20px;
     --sidepadding: 7vw;
+    --smallertextsize: 15px;
     --normaltextsize: 20px;
     --mediumertextsize: 23px;
     --mediumtextsize: 30px;
     --largertextsize: 40px;
 
     
-    --light-primary-color: hsl(200, 100%, 96%);
+    --light-primary-color: hsl(200, 100%, 99%);
     --light-primary-tint: hsl(200, 100%, 90%);
     --light-primary-dark: #2d3436;
     
@@ -26,6 +27,7 @@ body {
     margin: 0;
 
     font-family: "Bahnschrift", sans-serif;
+    src: url("resources/bahnschrift.ttf");
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;

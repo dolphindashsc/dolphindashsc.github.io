@@ -1,6 +1,6 @@
 .whowearecontainer {
     width: 100%;
-    height: 60vh;
+    height: fit-content;
     box-sizing: border-box;
 }
 
@@ -41,5 +41,12 @@
 
     border-radius: var(--main-radius);
     box-shadow: 0 0 10px var(--primary-tint);
-    //border: solid 1.5px var(--primary-dark);
+    /*border: solid 1.5px var(--primary-dark);*/
+}
+
+.whowearecontent_revised {
+    text-align: center;
+    font-size: var(--mediumtextsize);
+    line-height: 70px;
+    padding: 50px;
 }

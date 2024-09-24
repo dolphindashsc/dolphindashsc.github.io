@@ -69,6 +69,7 @@
 
 .eventiteminner {
     padding: 30px;
+    height: calc(100% - 60px);
 }
 
 .eventnavarrow {
@@ -103,6 +104,35 @@
 .eventdate {
     font-weight: 500;
 }
+
+.eventcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eventtext {
+    position: relative;
+    left: 0px;
+    width: 70%;
+}
+
+.imageslideshow {
+    /*position: absolute;*/
+
+    width: 25%;
+    height: 100px;
+    top: 0px;
+    background: red;
+    float:inline-end;
+
+}
+
+.slideshowimage {
+
+}
+
 
 #winter {
     opacity: 1;

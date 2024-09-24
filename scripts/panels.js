@@ -131,8 +131,6 @@ function recalculatePositions() {
     dt = (now - lastUpdate) / (1000 / targetFrameRate);
     lastUpdate = now;
 
-    console.log(dt);
-
     realX = lerp(realX, -targetX, smoothness * dt);
     
     // https://www.desmos.com/calculator/qcjjhio8jw

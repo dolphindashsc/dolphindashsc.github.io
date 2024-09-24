@@ -64,9 +64,6 @@ window.addEventListener("load", ()=> {
         logo.style.transform = "";
         logo.style.boxShadow = "";
     });
-
-    const pbarfill = document.getElementsByClassName("progressbarfill")[0];
-    pbarfill.style.width = getComputedStyle(document.body).getPropertyValue("--progressbarprogress");
 });
 
 function updateDarkmodeProperties() {
@@ -153,7 +150,7 @@ document.addEventListener('wheel', function(event) {
 document.addEventListener('scroll', function() {
     const x = window.scrollY;
     //console.log(x);
-
+    /*
     const whowearetitle = document.getElementsByClassName("whowearetitle")[0];
 
     // https://www.desmos.com/calculator/dvbr3h19gq
@@ -167,7 +164,8 @@ document.addEventListener('scroll', function() {
         const scrollshifted = (x - a + l) / l;
         opacity = 3 * (scrollshifted ** 2) - 2 * (scrollshifted ** 3);
     }*/
-    if (x < a) { opacity = 1; }
+    /*
+        if (x < a) { opacity = 1; }
     else if (a < x && x < b) { opacity = 1; }
     else if (b < x && x < b + l) {
         const scrollshifted = (-x + b + l) / l;
@@ -180,6 +178,7 @@ document.addEventListener('scroll', function() {
     if (x > 1400) {
         document.getElementById("charitytitlename").classList.add("charitytitlenamescrolled");
     }
+        */
 
     /*
     const headerinner = document.getElementsByClassName("headerinner")[0];
