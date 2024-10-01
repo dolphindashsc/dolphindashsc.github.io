@@ -7,7 +7,7 @@ body {
     --smallertextsize: 15px;
     --normaltextsize: 20px;
     --mediumertextsize: 23px;
-    --mediumtextsize: 30px;
+    --mediumtextsize: 30px; //1.8vw;
     --largertextsize: 40px;
 
     
@@ -43,4 +43,9 @@ body {
 
 hr {
     width: 95%;
+}
+
+html {
+    overflow-x: hidden;
+
 }
