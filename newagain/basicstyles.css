@@ -1,0 +1,225 @@
+body {
+    --primary-color: hsl(200, 100%, 96%);
+    --primary-tint: hsl(200, 83%, 91%);
+    --primary-dark: #2d3436;
+    --main-radius: 20px;
+    --sidepadding: 7vw;
+    --smallertextsize: 15px;
+    --normaltextsize: 20px;
+    --mediumertextsize: 23px;
+    --mediumtextsize: 30px;
+    --largertextsize: 40px;
+
+    
+    --light-primary-color: hsl(200, 100%, 99%);
+    --light-primary-tint: hsl(200, 100%, 90%);
+    --light-primary-dark: #2d3436;
+    
+    --dark-primary-color: hsl(200, 100%, 10%);
+    --dark-primary-tint: hsl(200, 100%, 15%);
+    --dark-primary-dark: ivory;
+
+    --progressbarprogress: 10%;
+    --progressbarsize: 95vw;
+    --progressbarprimary: #f77;
+    --progressbarsecondary: #b2c9f8;
+    
+    margin: 0;
+
+    font-family: "Bahnschrift", sans-serif;
+    src: url("resources/bahnschrift.ttf");
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: .3px;
+    line-height: 30px;
+    font-size: var(--normaltextsize);
+    color: var(--primary-dark);
+
+    overflow-x: hidden;
+
+    background-color: var(--primary-color);
+}
+
+hr {
+    width: 95%;
+}
+
+html {
+    overflow-x: hidden;
+
+}
+
+.titlecontainer {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+
+    background: url("../resources/5kbackground.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.title {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+
+    font-size: 9vh;
+    line-height: 10vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    
+    text-shadow: 2px 2px 5px var(--primary-dark);
+
+    padding: 2vw;
+}
+
+.nextmeeting {
+    display: block;
+    width: 100%;
+    padding: 1vh 0;
+    font-size: var(--mediumertextsize);
+    font-weight: 500;
+    text-align: center;
+
+    color: var(--primary-color);
+    background-color: var(--primary-dark);
+}
+
+.progressbarmain {
+    width: 100%;
+    height: 40px;
+
+    display: grid;
+    justify-content: center;
+    transition: height .1s ease-out;
+}
+
+
+.progressbarcontainer {
+    width: var(--progressbarsize);
+    height: 100%;
+    border-radius: 5px;
+    background-color: #b2c9f8;
+    position: relative;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+.progressbarfill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: var(--progressbarprogress);
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--progressbarprimary);
+}
+
+.progressbartextcontainer {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    width: 100%;
+
+    background: linear-gradient(90deg, var(--progressbarsecondary) var(--progressbarprogress), var(--progressbarprimary) var(--progressbarprogress));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.progressbartext {
+    margin: 5px;
+
+    color: transparent;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.topinfocontainer {
+    width: 100%;
+    display: grid;
+
+    height: fit-content;
+    box-sizing: border-box;
+    margin: 5vh 0 10vh 0;
+    padding: 0 2vw;
+}
+
+@media (min-width:768px) {
+    .topinfocontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.clubdescription {
+    display: flex;
+    font-size: var(--mediumtextsize);
+    font-weight: 500;
+    line-height: calc(var(--mediumtextsize) + 10px);
+    text-align: center;
+    align-items: center;
+    padding: 5px 35px 15px 35px;
+}
+
+.upcomingevents {
+    height: 100%;
+    overflow: auto;
+    border: 3px solid var(--primary-dark);
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
+.upcomingevents table {
+    width: 100%;
+    height: 30vh;
+}
+.upcomingtitle {
+    position: relative;
+    display: block;
+    font-size: var(--mediumtextsize);
+    font-weight: 400;
+    text-align: center;
+    margin: 5px 0;
+}
+.upcomingevents tbody {
+    display: block;
+    overflow: auto;
+    height: 30vh;
+}
+.upcomingevents tbody tr:nth-child(odd){
+    background-color: var(--primary-tint);
+}
+.eventcontainer {
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    background-color: red;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    padding: 5px;
+    box-sizing: border-box;
+}
+.event span {width: 100%;}
+
+.eventtime {
+    font-weight: 400;
+    text-decoration: underline;
+}
+.eventtitle {
+
+}
+.eventdescription {
+    font-size: small;
+}
