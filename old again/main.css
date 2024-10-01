@@ -1,0 +1,51 @@
+body {
+    --primary-color: hsl(200, 100%, 96%);
+    --primary-tint: hsl(200, 83%, 91%);
+    --primary-dark: #2d3436;
+    --main-radius: 20px;
+    --sidepadding: 7vw;
+    --smallertextsize: 15px;
+    --normaltextsize: 20px;
+    --mediumertextsize: 23px;
+    --mediumtextsize: 30px; //1.8vw;
+    --largertextsize: 40px;
+
+    
+    --light-primary-color: hsl(200, 100%, 99%);
+    --light-primary-tint: hsl(200, 100%, 90%);
+    --light-primary-dark: #2d3436;
+    
+    --dark-primary-color: hsl(200, 100%, 10%);
+    --dark-primary-tint: hsl(200, 100%, 15%);
+    --dark-primary-dark: ivory;
+
+    --progressbarprogress: 0%;
+    --progressbarsize: 95vw;
+    --progressbarprimary: #f77;
+    --progressbarsecondary: #b2c9f8;
+    
+    margin: 0;
+
+    font-family: "Bahnschrift", sans-serif;
+    src: url("resources/bahnschrift.ttf");
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: .3px;
+    line-height: 30px;
+    font-size: var(--normaltextsize);
+    color: var(--primary-dark);
+
+    overflow-x: hidden;
+
+    background-color: var(--primary-color);
+}
+
+hr {
+    width: 95%;
+}
+
+html {
+    overflow-x: hidden;
+
+}

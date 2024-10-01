@@ -4,107 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin Dash Student Crew</title>
+    <link rel="icon" type="image/x-icon" href="resources/ddsc logo-1.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="sectionstyles/header.css">
-    <link rel="stylesheet" href="sectionstyles/title.css">
-    <link rel="stylesheet" href="sectionstyles/whoweare.css">
-    <link rel="stylesheet" href="sectionstyles/events.css">
-    <link rel="stylesheet" href="sectionstyles/charity.css">
-    
-    <script type="text/javascript" src="scripts/main.js"></script>
-    <script type="text/javascript" src="scripts/animations.js"></script>
-    <script type="text/javascript" src="scripts/touchpanels.js"></script>
-    <script type="text/javascript" src="scripts/charityselector.js"></script>
-    <script type="text/javascript" src="scripts/externaldata.js"></script>
+    <link rel="stylesheet" href="SS/basicstyles.css">
+    <script src="SS/touchpanels.js"></script>
+    <script src="SS/behaviour.js"></script>
 </head>
 <body>
     <header>
-        <div class="headerinner">
-            <div id="headerlogocontainer">
-                <img src="resources/ddsc logo-1.png" id="headerlogo">
-            </div>
-            <div class="headeritems">
-                <!-- <div class="headeritem"><a href="">About Us</a></div> -->
-                <!-- <div class="headeritem"><a href="">Past Years</a></div> -->
-                <!-- <div class="headeritem"><a href="">Sponsors</a></div> -->
-                <div class="headeritem"><a href="">Join the club</a></div>
-            </div>
-            <div class="supportthecause">
-                <a href="">Support Us</a>
-            </div>
-        </div>
-        <!--div class="newscontainer">
-            <div class="newsitem">
-                <span>Next meeting: 9-25 After School in Room 252</span>
-            </div>
-            <div class="newsitem">
-                <span>Talent show coming soon!</span>
-            </div>
-            <div class="newsitem">
-                <span>New race for elementary schoolers</span>
-            </div>
-        </div-->
-        <div class="progressbarmain">
-            <div class="progressbarcontainer">
-                <div class="progressbarfill"></div>
-                <div class="progressbartextcontainer">
-                    <span class="progressbartext">$1,000 raised / $10,000</span>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="fixedbutton" id="themeswitcher">
-        <img src="resources/moon.svg">
-    </div>
-    <a href="https://www.instagram.com/dolphindashstudentcrew/" target="_blank">
-        <div class="fixedbutton" id="instagram">
-            <img src="resources/instagram.jpg">
-        </div>
-    </a>
-    <a href="https://www.instagram.com/dolphindashstudentcrew/" target="_blank">
-        <div class="fixedbutton" id="facebook">
-            <img src="resources/facebook.png">
-        </div>
-    </a>
 
-    <!-- end of the statics -->
+    </header>
     <div class="titlecontainer">
-        <div class="title">
-            Dolphin Dash Student Crew
-<!--             <span class="titleletter">D</span>
-            <div class="titleletterrest">olphin&nbsp;&nbsp;</div>
-            <span class="titleletter">D</span>
-            <div class="titleletterrest">ash&nbsp;&nbsp;</div>
-            <span class="titleletter">S</span>
-            <div class="titleletterrest">tudent&nbsp;&nbsp;</div>
-            <span class="titleletter">C</span>
-            <div class="titleletterrest">rew&nbsp;&nbsp;</div> -->
+        <span class="title">Dolphin Dash Student Crew</span>
+    </div>
+    <span class="nextmeeting">Next meeting: idk</span>
+    <div class="progressbarmain">
+        <div class="progressbarcontainer">
+            <div class="progressbarfill"></div>
+            <div class="progressbartextcontainer">
+                <span class="progressbartext">$1,000 raised / $10,000</span>
+            </div>
         </div>
     </div>
-    <div class="whowearecontainer">
-        <div class="whoweareinner">
-            <div class="whowearecontent_revised">
+    <div class="topinfocontainer">
+        <div class="clubdescription">
+            <span>
                 Dolphin Dash Student Crew (DDSC) is a student-run organization of Ocean Lakes HS students who plan, organize, and host events to raise money for a local charity each year
-            </div>
-            <!--span class="whowearetitle whowearetitlehidden">About DDSC</span>
-            <div class="whowearecontent">
-                <p>
-                </p>
-                <p>
-                    Last year, we raised $7,000 for Bean's Way Foundation.
-                </p>
-                <!--p>
-                    The Dolphin Dash Student Crew is a club at Ocean Lakes High School focused on community service. 
-                    Each year, we organize events and work with local sponsors to raise funds for a selected charity.
-                    Throughout the year, we hold various fundraising activities, including our main event, the Dolphin Dash 5k race.
-                    This race brings together students, families, and faculty while raising money for our charity. 
-                    At the end of the school year, all proceeds from our events are donated to the charity, helping those in need. 
-                </p-->
-            <!--/div-->
+            </span>
+        </div>
+        <div class="upcomingevents">
+            <span class="upcomingtitle">Upcoming</span>
+            <table>
+                <tbody>
+                    <tr class="eventcontainer">
+                        <td>
+                            <div class="event">
+                                <span class="eventtime">Monday 8-17-24 5:00 PM</span>
+                                <span class="eventtitle">carwash</span>
+                                <span class="eventdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, obcaecati. Sint odio ex a ducimus, quo vero consequuntur aut ullam.</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>  
         </div>
     </div>
     <div class="eventscontainer">
@@ -118,7 +60,7 @@
                 <polyline points="4,3 15,25 4,45" fill="none" stroke-width="6" stroke="var(--primary-dark)" stroke-linecap="round"></polyline>
             </svg>
         </div>
-        <span class="eventstitle">Events</span>
+        <span class="eventstitle">Main Events</span>
         <div class="eventscontent">
             <div class="eventscontentscontainer">
                 <div class="eventitem" id="fivek">
@@ -153,7 +95,7 @@
                         <div class="eventheader">Talent Show</div>
                         <div class="eventdate">Janurary 11, 2025</div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi temporibus fuga, recusandae consequuntur perspiciatis repellendus pariatur voluptas, praesentium amet fugiat nulla! Qui id officia delectus atque suscipit commodi optio quis aspernatur. Iusto quidem distinctio magni ducimus quas nemo, eveniet mollitia. Est fuga eaque quas repudiandae deserunt minus numquam. Necessitatibus saepe voluptas vero porro, doloremque culpa quibusdam sit rerum iusto accusantium quasi a. Aliquid ipsa eius dignissimos aliquam dicta blanditiis, ea soluta provident reprehenderit quaerat eum asperiores tenetur ducimus officia eaque rem nisi voluptatum minima iure hic numquam obcaecati, minus reiciendis maxime! Iure nostrum quia odio provident adipisci placeat voluptatibus accusantium!
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, iusto explicabo? Exercitationem et amet veniam ex, in quis corrupti debitis?
                         </p>
                     </div>    
                 </div>
@@ -163,31 +105,6 @@
             <div class="eventnavitem eventnavitemselected"></div>
             <div class="eventnavitem"></div>
             <div class="eventnavitem"></div>
-        </div>
-    </div>
-    <div class="charitycontainer">
-        <div class="charitytitlecontainer">
-            <span id="charitytitle">This year, DDSC is supporting&nbsp;</span>
-            <span id="charitytitlename">Connect With a Wish</span>
-        </div>
-        <div class="charitycontentcontainer">
-            <div class="charitycontentmenu">
-                <div class="charityoption" id="charitygoal">
-                    <span>Their Goal</span>
-                </div>
-                <div class="charityoption" id="whychose">
-                    <span>Why we chose them</span>
-                </div>
-                <div class="charityoption" id="pastcharities">
-                    <span>Past charities</span>
-                </div>
-            </div>
-            <div class="charityselectedbar">
-                <div id="charityselectedbarinner"></div>
-            </div>
-            <div class="charitycontent">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti saepe sed ut ipsa est ratione ipsum nihil, hic odio veritatis.
-            </div>
         </div>
     </div>
 </body>

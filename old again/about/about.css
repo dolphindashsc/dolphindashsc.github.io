@@ -1,0 +1,8 @@
+.titlesection {
+    height: 700px;
+    display: flex;
+    background-image: url(crew.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}

@@ -1,0 +1,92 @@
+.charitycontainer {
+    margin-top: 50px;
+    background: linear-gradient(180deg, var(--primary-color) 0px, var(--primary-dark) 5px);
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 80vh;
+}
+
+.charitytitlecontainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    font-size: var(--largertextsize);
+}
+
+#charitytitlename {
+    color: var(--progressbarsecondary);
+    font-size: 0;
+    font-weight: 400;
+    transition: .5s ease-in-out all;
+}
+
+.charitytitlenamescrolled {
+    font-size: var(--largertextsize) !important;
+}
+
+.charitycontentcontainer {
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px var(--sidepadding) 10px 30px;
+    height: 100%;
+}
+
+.charitycontentmenu {
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+
+    padding-right: 20px;
+}
+
+.charityselectedbar {
+    width: 3px;
+    height: 100%;
+    position: relative;
+}
+
+#charityselectedbarinner {
+    top: 50px;
+    height: 100px;
+
+    width: 100%;
+    position: absolute;
+    background-color: var(--primary-color);
+
+    border-radius: 3px;
+
+    transition-delay: 0s, 500ms;
+    transition-property: top, height;
+
+    transition: 500ms all ease;
+}
+
+.charityoption {
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    font-size: var(--mediumertextsize);
+    font-weight: 400;
+
+    margin: 10px;
+
+    cursor: pointer;
+}
+
+.charityoptionselected {
+    border-right: 3px solid var(--primary-color);    
+}
+
+.charitycontent {
+    padding: 15px 0 15px 25px;
+}

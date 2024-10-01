@@ -23,6 +23,7 @@ body {
     --progressbarsize: 95vw;
     --progressbarprimary: #f77;
     --progressbarsecondary: #b2c9f8;
+    --eventsmaxheight: 100px;
     
     margin: 0;
 
@@ -55,7 +56,7 @@ html {
     height: 80vh;
     display: flex;
 
-    background: url("../resources/5kbackground.png");
+    background: url("/resources/5kbackground.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -93,17 +94,14 @@ html {
     width: 100%;
     height: 40px;
 
-    display: grid;
     justify-content: center;
-    transition: height .1s ease-out;
 }
 
 
 .progressbarcontainer {
-    width: var(--progressbarsize);
-    height: 100%;
-    border-radius: 5px;
-    background-color: #b2c9f8;
+    width: 100%;
+    height: 40px;
+    background-color: var(--progressbarsecondary);
     position: relative;
 
     box-shadow: 0 4px 10px rgba(0,0,0,.1);
@@ -116,7 +114,6 @@ html {
     
     width: var(--progressbarprogress);
     height: 100%;
-    border-radius: 5px;
     background-color: var(--progressbarprimary);
 }
 
@@ -134,7 +131,7 @@ html {
 }
 
 .progressbartext {
-    margin: 5px;
+    margin: 5px 20px;
 
     color: transparent;
     font-weight: 500;
@@ -222,4 +219,155 @@ html {
 }
 .eventdescription {
     font-size: small;
+}
+
+.eventscontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+
+    box-sizing: border-box;
+    padding-left: var(--sidepadding);
+    padding-right: var(--sidepadding);
+}
+
+.eventstitle {
+    font-size: var(--largertextsize);
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.eventscontentscontainer {
+    position: relative;
+    left: 0px;
+    height: var(--eventsmaxheight);
+    width: 100%;
+
+    cursor: grab;
+}
+
+.eventscontentscontainer:active {
+    cursor: grabbing;
+}
+
+.eventsnavigationbuttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.eventnavitem {
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid var(--primary-dark);
+    border-radius: 15px;
+}
+
+.eventnavitemselected {
+    background-color: var(--primary-dark);
+}
+
+.eventnavitem:hover {
+    cursor: pointer;
+}
+
+.eventitem {
+    position: absolute;
+    display: flex;
+    height: 100%;
+
+    user-select: none;
+
+    border-radius: var(--main-radius);
+    border: solid 2px var(--primary-dark);
+}
+
+.eventiteminner {
+    padding: 30px;
+    height: fit-content;
+}
+
+.eventnavarrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(45%);
+
+    width: 20px;
+    height: 50px;
+    z-index: 1;
+
+    cursor: pointer;
+}
+
+#eventnavarrowleft {
+    left: 3vw; 
+}
+
+#eventnavarrowright {
+    right: 3vw; 
+}
+
+@media (max-width:768px) {   
+    .eventnavarrow { display: none !important; }
+    .imageslideshow {display: none !important;}
+    .eventtext { width: 100% !important;}
+}
+
+.eventheader{
+    width: 100%;
+    text-align: center;
+    font-size: var(--mediumtextsize);
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.eventdate {
+    font-weight: 500;
+}
+
+.eventcontent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1vw;
+}
+
+.eventtext {
+    position: relative;
+    grid-column: span 7; 
+}
+
+.imageslideshow {
+    grid-column: span 3; 
+
+    background: red;
+    float:inline-end;
+
+}
+
+.slideshowimage {
+
+}
+
+
+#winter {
+    opacity: 1;
+
+    background-color: rgb(182, 216, 255);
+}
+
+#fivek {
+    opacity: 1;
+
+    background-color: rgb(128, 164, 255);
 }

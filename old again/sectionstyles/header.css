@@ -1,0 +1,235 @@
+header {
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+
+    transition: .2s ease-out top;
+}
+
+.headerscrolling {
+    top: -100px;
+}
+
+.headerinner {
+    height: 8vh;
+    display: flex;
+    width: 100vw;
+    /*margin-left: 20px;
+    //margin-right: 20px;
+    //margin-top: 15px;
+    */
+    
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    /*border-radius: var(--main-radius);*/
+    background: var(--primary-color);
+
+    /*might replace later*/
+    /*box-shadow: 0 1px 3px #001f421a, -1px 6px 6px #001f4217, -2px 13px 8px #001f420d, -4px 24px 10px #001f4203, -7px 37px 11px #001f4200;*/
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headeritems {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 100%;
+}
+
+#headerlogocontainer {
+    height: 80%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#headerlogo {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 5px;
+
+    transition: .1s linear all;
+}
+
+.headeritem {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin: 0 15px 0 15px;
+    height: 100%;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: .1s ease-in-out border;
+}
+
+.headeritem:hover {
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+.headeritem a {
+    height: fit-content;
+    text-decoration: none;
+    color: var(--primary-dark);
+}
+
+.supportthecause {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    cursor: pointer;
+    
+}
+
+.supportthecause a {
+    align-self: center;
+    padding: 5px 20px 5px 20px;
+
+    text-decoration: none;
+    border-radius: var(--main-radius);
+    background-color: var(--primary-dark);
+    color: var(--primary-color);
+    
+    transition: .2s ease-in-out background-color;
+}
+
+.supportthecause a:hover{
+    background-color: var(--primary-color);
+    color: var(--primary-dark);
+    border: solid 1px var(--primary-dark);
+}
+
+.progressbarmain {
+    width: 100%;
+    height: 7px;
+
+    display: grid;
+    justify-content: center;
+    transition: height .1s ease-out;
+}
+
+.progressbarmainhover {
+    height: 40px;
+}
+
+.progressbarcontainer {
+    width: var(--progressbarsize);
+    height: 100%;
+    border-radius: 5px;
+    background-color: #b2c9f8;
+    position: relative;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+.progressbarfill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    transition: 1s cubic-bezier(.17,.67,.16,1.21);
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--progressbarprimary);
+}
+
+.progressbartextcontainer {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    width: 100%;
+
+    background: linear-gradient(90deg, var(--progressbarsecondary) var(--progressbarprogress), var(--progressbarprimary) var(--progressbarprogress));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.progressbartext {
+    margin: 5px;
+
+    color: transparent;
+    font-weight: 500;
+    font-size: 25px;
+
+    opacity: 0;
+
+    transition: .1s ease-in opacity;
+}
+
+
+.fixedbutton {
+    position: fixed;
+    display: grid;
+
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-dark);
+    border-radius: 50px;
+
+    z-index: 10;
+    cursor: pointer;
+
+    transition: .1s ease-out all;
+}
+
+.fixedbutton:hover {
+    width: 32px;
+    height: 32px;
+}
+
+.fixedbutton img {
+    align-self: center;
+    justify-self: center;
+    border-radius: 50px;
+
+    z-index: 11;
+}
+
+#themeswitcher {
+    right: 15px;
+}
+
+#themeswitcher img {
+    width: 80%;
+    height: 80%;
+}
+
+#instagram {
+    right: 55px;
+}
+
+#instagram img {
+    width: 100%;
+    height: 100%;
+}
+
+#facebook {
+    right: 95px;
+}
+
+#facebook img{
+    width: 100%;
+    height: 100%;
+}
+
+.newscontainer {
+    display: flex;
+    background-color: var(--light-primary-tint);
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.newsitem {
+    font-size: var(--smallertextsize);
+}
