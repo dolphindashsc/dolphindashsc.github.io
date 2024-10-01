@@ -19,15 +19,13 @@ window.addEventListener("load", ()=> {
         pbartext.style.opacity = "0";
     });
 
+    pbarmain.classList.add("progressbarmainhover");
+    pbartext.style.opacity = "1";
+
     setTimeout(() => {
-        pbarmain.classList.add("progressbarmainhover");
-        pbartext.style.opacity = "1";
-    
-        setTimeout(() => {
-            pbarmain.classList.remove("progressbarmainhover");
-            pbartext.style.opacity = "0";
-        }, 2000);
-    }, 1500);
+        pbarmain.classList.remove("progressbarmainhover");
+        pbartext.style.opacity = "0";
+    }, 2500);
 
     // night mode
     const themeswitcher = document.getElementById("themeswitcher");
