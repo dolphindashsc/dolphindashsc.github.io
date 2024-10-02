@@ -1,10 +1,36 @@
 {
     "goal":"10000",
-    "raised":"250",
-    "news":
+    "earnings":[
+        {
+            "source":"Donation from Seaside Dogs & Grill",
+            "amount":100
+        },
+        {
+            "source":"Volunteering at J&A Racing 10 Miler",
+            "amount":150
+        },
+        {
+            "source":"Car Wash at Sonic - Donations",
+            "amount":995
+        }
+    ],
+    "nextmeeting":"10-2-24",
+    "upcomingevents":
     [
-        "Next meeting: 9-25 After School in Room 252",
-        "Talent show coming soon!",
-        "New race for elementary schoolers"
+        {
+            "time":"I just lost my dog",
+            "title":"And my brother",
+            "description":"taught me how to chase the bag"
+        },
+        {
+            "time":"I just lost my dog",
+            "title":"And my brother",
+            "description":"taught me how to chase the bag"
+        },
+        {
+            "time":"I just lost my dog",
+            "title":"And my brother",
+            "description":"taught me how to chase the bag"
+        }
     ]
 }

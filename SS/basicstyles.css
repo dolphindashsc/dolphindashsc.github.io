@@ -1,6 +1,7 @@
 body {
     --primary-color: hsl(200, 100%, 96%);
     --primary-tint: hsl(200, 83%, 91%);
+    --primary-tint2: hsl(200, 76%, 87%);
     --primary-dark: #2d3436;
     --main-radius: 20px;
     --sidepadding: 7vw;
@@ -219,9 +220,11 @@ html {
 .upcomingevents {
     height: 100%;
     overflow: auto;
-    border: 3px solid var(--primary-dark);
+    border: 3px transparent var(--primary-tint2);
     border-radius: 10px;
-    padding: 10px 5px;
+    padding: 10px 15px;
+
+    background-color: var(--primary-dark);
 }
 
 .upcomingevents table {
@@ -235,6 +238,8 @@ html {
     font-weight: 400;
     text-align: center;
     margin: 5px 0;
+
+    color: var(--primary-color);
 }
 .upcomingevents tbody {
     display: block;
@@ -244,11 +249,17 @@ html {
 .upcomingevents tbody tr:nth-child(odd){
     background-color: var(--primary-tint);
 }
+.upcomingevents tbody tr:nth-child(even){
+    background-color: var(--primary-tint2);
+}
+
 .eventcontainer {
     display: inline-block;
     width: 100%;
     height: fit-content;
-    background-color: red;
+
+    border-radius: 2px;
+    margin: 5px 0;
 }
 
 .event {
