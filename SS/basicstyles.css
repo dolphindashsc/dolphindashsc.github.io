@@ -237,7 +237,7 @@ html {
     font-size: var(--mediumtextsize);
     font-weight: 400;
     text-align: center;
-    margin: 5px 0;
+    margin: 10px 0;
 
     color: var(--primary-color);
 }
@@ -411,7 +411,7 @@ html {
     grid-column: span 7; 
 }
 
-.imageslideshow {
+.imageslideshowcontainer {
     grid-column: span 3; 
 
     background: red;
@@ -419,10 +419,14 @@ html {
 
 }
 
-.slideshowimage {
-
+.imageslideshow {
+    height: 100%;
+    width: 100%;
+    background-image: url('../resources/winter carnival/0.jpg');
+    
+    background-position: center;
+    background-size: cover;
 }
-
 
 #winter {
     opacity: 1;
