@@ -92,9 +92,7 @@ html {
 
 .progressbarmain {
     width: 100%;
-    height: 40px;
-
-    justify-content: center;
+    height: fit-content;
 }
 
 
@@ -138,21 +136,57 @@ html {
     font-size: 25px;
 }
 
-.breakdowncontainer {
+.breakdowntextcontainer {
     display: inline-flex;
     height: 100%;
     align-items: center;
     justify-content: right;
     position: absolute;
     width: 100%;
+    cursor: pointer;
 }
 
-
-.breakdown {
+.breakdowntext {
     margin: 5px 20px;
 
     font-weight: 500;
-    font-size: 25px;
+    font-size: var(--smallertextsize);
+}
+.breakdownarrow {
+    display: none;
+    margin: 5px 20px;
+
+    font-weight: 500;
+    font-size: var(--smallertextsize);
+}
+
+@media (max-width:768px) {
+    .breakdowntext{ display: none; }
+    .breakdownarrow {display: block; }
+}
+
+.breakdown {
+    background-color: var(--primary-tint);
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+.breakdownclosed {
+    display: none !important;
+}
+
+.breakdownentry {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+.breakdownamount {
+    font-weight: 500;
 }
 
 .topinfocontainer {

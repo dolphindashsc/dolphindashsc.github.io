@@ -13,4 +13,12 @@ window.addEventListener("load", () => {
     }
 
     document.body.style.setProperty("--eventsmaxheight", maxheight + "px");
+
+    const pbar = document.getElementsByClassName("progressbarcontainer")[0];
+    pbar.addEventListener("mousedown", () => { toggleBreakdown(); });
 });
+
+
+function toggleBreakdown() {
+    document.getElementsByClassName("breakdown")[0].classList.toggle("breakdownclosed");
+}
