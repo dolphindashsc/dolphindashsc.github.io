@@ -88,7 +88,7 @@ function addEventRow(time, title, description) {
     // Create and append the event description span
     const descSpan = document.createElement('span');
     descSpan.className = 'eventdescription';
-    descSpan.textContent = description;
+    descSpan.innerHTML = description;
     eventDiv.appendChild(descSpan);
 
     // Append the event div to the td

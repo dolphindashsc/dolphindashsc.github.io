@@ -274,7 +274,7 @@ html {
 
 .eventtime {
     font-weight: 400;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 .eventtitle {
 
