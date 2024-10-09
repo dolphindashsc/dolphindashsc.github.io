@@ -1,4 +1,4 @@
-const datapath = "./data.json";
+const datapath = "https://raw.githubusercontent.com/GesChen/clubdata/refs/heads/main/ddsc.json";
 var data;
 var windowloaded = false;
 
