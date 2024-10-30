@@ -439,3 +439,40 @@ html {
 
     background-color: rgb(128, 164, 255);
 }
+
+.fixedbutton {
+    position: fixed;
+    display: grid;
+
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-dark);
+    border-radius: 50px;
+
+    z-index: 10;
+    cursor: pointer;
+
+    transition: .1s ease-out all;
+}
+
+.fixedbutton:hover {
+    width: 32px;
+    height: 32px;
+}
+
+.fixedbutton img {
+    align-self: center;
+    justify-self: center;
+    border-radius: 50px;
+
+    z-index: 11;
+
+#instagram {
+    right: 55px;
+}
+
+#instagram img {
+    width: 100%;
+    height: 100%;
+}
