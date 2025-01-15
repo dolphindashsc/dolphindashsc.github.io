@@ -21,7 +21,7 @@ window.addEventListener("load", () => { windowloaded = true; });
 update();
 
 function updateContent() {
-    document.getElementsByClassName("nextmeeting")[0].textContent = `Next meeting: ${data.nextmeeting}`;
+    //document.getElementsByClassName("nextmeeting")[0].textContent = `Next meeting: ${data.nextmeeting}`;
     
     var totalraised = 0;
     for (let i = 0; i < data.earnings.length; i++) {

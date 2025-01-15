@@ -1,55 +1,30 @@
-body {
-    --primary-color: hsl(200, 100%, 96%);
-    --primary-tint: hsl(200, 83%, 91%);
-    --primary-tint2: hsl(200, 76%, 87%);
-    --primary-dark: #2d3436;
-    --main-radius: 20px;
-    --sidepadding: 7vw;
-    --smallertextsize: 15px;
-    --normaltextsize: 20px;
-    --mediumertextsize: 23px;
-    --mediumtextsize: 30px;
-    --largertextsize: 40px;
-
+.signuptab {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     
-    --light-primary-color: hsl(200, 100%, 99%);
-    --light-primary-tint: hsl(200, 100%, 90%);
-    --light-primary-dark: #2d3436;
-    
-    --dark-primary-color: hsl(200, 100%, 10%);
-    --dark-primary-tint: hsl(200, 100%, 15%);
-    --dark-primary-dark: ivory;
-
-    --progressbarprogress: 10%;
-    --progressbarsize: 95vw;
-    --progressbarprimary: #f77;
-    --progressbarsecondary: #b2c9f8;
-    --eventsmaxheight: 100px;
-    
-    margin: 0;
-
-    font-family: "Bahnschrift", sans-serif;
-    src: url("resources/bahnschrift.ttf");
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    letter-spacing: .3px;
-    line-height: 30px;
-    font-size: var(--normaltextsize);
+    text-decoration: none;
     color: var(--primary-dark);
 
-    overflow-x: hidden;
+    background: var(--primary-tint);
 
-    background-color: var(--primary-color);
+    /* border: 3px double var(--primary-dark); */
+    border-radius: 0 0 var(--main-radius) var(--main-radius);
+    box-shadow: 0px 0px 10px var(--primary-dark);
+
+    transition: all .1s ease-out;
 }
-
-hr {
-    width: 95%;
+.signupbutton {
+    padding: 10px 20px;
+    
 }
-
-html {
-    overflow-x: hidden;
-
+.signuptab:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 15px var(--primary-dark);
+    background: var(--primary-color);
+    transform: translateX(-50%) scale(1.05);
 }
 
 .titlecontainer {
@@ -57,7 +32,7 @@ html {
     height: 80vh;
     display: flex;
 
-    background: url("../resources/background images/wHvb3vOHSm+6pFfbpPVmEw.jpg");
+    background: url("../resources/background images/IMG_20240518_115905807_HDR.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -253,193 +228,6 @@ html {
     background-color: var(--primary-tint2);
 }
 
-.eventcontainer {
-    display: inline-block;
-    width: 100%;
-    height: fit-content;
-
-    border-radius: 2px;
-    margin: 5px 0;
-}
-
-.event {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    padding: 5px;
-    box-sizing: border-box;
-}
-.event span {width: 100%;}
-
-.eventtime {
-    font-weight: 400;
-    /*text-decoration: underline;*/
-}
-.eventtitle {
-
-}
-.eventdescription {
-    font-size: small;
-}
-
-.eventscontainer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: fit-content;
-
-    box-sizing: border-box;
-    padding-left: var(--sidepadding);
-    padding-right: var(--sidepadding);
-}
-
-.eventstitle {
-    font-size: var(--largertextsize);
-    padding-top: 40px;
-    padding-bottom: 20px;
-
-    width: 100%;
-    height: fit-content;
-    text-align: center;
-}
-
-.eventscontentscontainer {
-    position: relative;
-    left: 0px;
-    height: var(--eventsmaxheight);
-    width: 100%;
-
-    cursor: grab;
-}
-
-.eventscontentscontainer:active {
-    cursor: grabbing;
-}
-
-.eventsnavigationbuttons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-}
-
-.eventnavitem {
-    margin: 5px;
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border: 2px solid var(--primary-dark);
-    border-radius: 15px;
-}
-
-.eventnavitemselected {
-    background-color: var(--primary-dark);
-}
-
-.eventnavitem:hover {
-    cursor: pointer;
-}
-
-.eventitem {
-    position: absolute;
-    display: flex;
-    height: 100%;
-
-    user-select: none;
-
-    border-radius: var(--main-radius);
-    border: solid 2px var(--primary-dark);
-}
-
-.eventiteminner {
-    padding: 30px;
-    height: fit-content;
-}
-
-.eventnavarrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(45%);
-
-    width: 20px;
-    height: 50px;
-    z-index: 1;
-
-    cursor: pointer;
-}
-
-#eventnavarrowleft {
-    left: 3vw; 
-}
-
-#eventnavarrowright {
-    right: 3vw; 
-}
-
-@media (max-width:768px) {   
-    .eventnavarrow { display: none !important; }
-    .eventcontent { display: flex !important;}
-    .imageslideshow {display: none !important;}
-    .eventtext { width: 100% !important;}
-}
-
-.eventheader{
-    width: 100%;
-    text-align: center;
-    font-size: var(--mediumtextsize);
-    font-weight: 500;
-
-    margin-bottom: 10px;
-}
-
-.eventdate {
-    font-weight: 500;
-}
-
-.eventcontent {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 2vw;
-}
-
-.eventtext {
-    margin: 10px 0;
-    position: relative;
-    grid-column: span 7; 
-}
-
-.imageslideshowcontainer {
-    grid-column: span 3; 
-
-    background: red;
-    float:inline-end;
-
-}
-
-.imageslideshow {
-    height: 100%;
-    width: 100%;
-    background-image: url('../resources/winter carnival/0.jpg');
-    
-    background-position: center;
-    background-size: cover;
-}
-
-#winter {
-    opacity: 1;
-
-    background-color: rgb(182, 216, 255);
-}
-
-#fivek {
-    opacity: 1;
-
-    background-color: rgb(128, 164, 255);
-}
-
 .fixedbutton {
     position: fixed;
     display: grid;
@@ -475,4 +263,25 @@ html {
 #instagram img {
     width: 100%;
     height: 100%;
+}
+
+.join {
+    display: flex;
+    width: 100%;
+    padding: 5vw;
+
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.jointitle {
+    width: 100%;
+    font-size: var(--mediumtextsize);
+    text-align: center;
+    padding: 2vw 0;
+}
+
+.joindesc {
+    width: 100%;
+    text-align: center;
 }

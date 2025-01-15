@@ -1,4 +1,4 @@
-const bgimagedir = "resources/background images/"
+const bgimagedir = "../resources/background images/"
 const changeInterval = 5000;
 var loadedimages = []
 

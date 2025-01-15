@@ -1,0 +1,22 @@
+.titlecontainer {
+    width: 100%;
+    display: flex;
+    
+    background: var(--primary-tint2);
+}
+
+.title {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+
+    font-size: 9vh;
+    line-height: 10vh;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    
+    text-shadow: 2px 2px 5px var(--primary-dark);
+
+    padding: 10vw;
+}

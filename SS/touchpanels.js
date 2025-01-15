@@ -84,7 +84,7 @@ function drag(e) {
 
     if (dragging) {
         targetX = dragStartTargetX + dragStartX - curX;
-        e.preventDefault();
+        //e.preventDefault();
     }
 }
 

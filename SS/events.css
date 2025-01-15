@@ -1,0 +1,195 @@
+#fivek {
+    opacity: 1;
+
+    background-color: hsl(var(--global-hue), 100%, 85%);
+}
+
+#winter {
+    opacity: 1;
+
+    background-color: hsl(var(--global-hue), 100%, 88.75%);
+}
+
+#minidash {
+    opacity: 1;
+
+    background-color: hsl(var(--global-hue), 100%, 92.5%);
+}
+
+#talent {
+    opacity: 1;
+
+    background-color: hsl(var(--global-hue), 100%, 95%);
+}
+
+
+.eventcontainer {
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+
+    border-radius: 2px;
+    margin: 5px 0;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    padding: 5px;
+    box-sizing: border-box;
+}
+.event span {width: 100%;}
+
+.eventtime {
+    font-weight: 400;
+    /*text-decoration: underline;*/
+}
+.eventtitle {
+
+}
+.eventdescription {
+    font-size: small;
+}
+
+.eventscontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+
+    box-sizing: border-box;
+    padding-left: var(--sidepadding);
+    padding-right: var(--sidepadding);
+}
+
+.eventstitle {
+    font-size: var(--largertextsize);
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+.eventscontentscontainer {
+    position: relative;
+    left: 0px;
+    height: var(--eventsmaxheight);
+    width: 100%;
+
+    cursor: grab;
+}
+
+.eventscontentscontainer:active {
+    cursor: grabbing;
+}
+
+.eventsnavigationbuttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.eventnavitem {
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid var(--primary-dark);
+    border-radius: 15px;
+}
+
+.eventnavitemselected {
+    background-color: var(--primary-dark);
+}
+
+.eventnavitem:hover {
+    cursor: pointer;
+}
+
+.eventitem {
+    position: absolute;
+    display: flex;
+    height: 100%;
+
+    user-select: none;
+
+    border-radius: var(--main-radius);
+    border: solid 2px var(--primary-dark);
+}
+
+.eventiteminner {
+    padding: 30px;
+    height: fit-content;
+}
+
+.eventnavarrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(45%);
+
+    width: 20px;
+    height: 50px;
+    z-index: 1;
+
+    cursor: pointer;
+}
+
+#eventnavarrowleft {
+    left: 3vw; 
+}
+
+#eventnavarrowright {
+    right: 3vw; 
+}
+
+@media (max-width:768px) {   
+    .eventnavarrow { display: none !important; }
+    .eventcontent { display: flex !important;}
+    .imageslideshow {display: none !important;}
+    .eventtext { width: 100% !important;}
+}
+
+.eventheader{
+    width: 100%;
+    text-align: center;
+    font-size: var(--mediumtextsize);
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.eventdate {
+    font-weight: 500;
+}
+
+.eventcontent {
+    display: flex;
+}
+
+.eventtext {
+    margin: 10px 0;
+    position: relative;
+}
+
+.imageslideshowcontainer {
+    grid-column: span 3; 
+
+    background: red;
+    float:inline-end;
+
+}
+
+.imageslideshow {
+    height: 100%;
+    width: 100%;
+    background-image: url('../resources/winter carnival/0.jpg');
+    
+    background-position: center;
+    background-size: cover;
+}
