@@ -23,7 +23,7 @@
     --dark-primary-dark: hsl(60, 100%, 97%);
     */
 
-    --progressbarprogress: 10%;
+    --progressbarprogress: 100%;
     --progressbarsize: 95vw;
     --progressbarprimary: #f77;
     --progressbarsecondary: #b2c9f8;

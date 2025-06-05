@@ -23,6 +23,15 @@ update();
 function updateContent() {
     //document.getElementsByClassName("nextmeeting")[0].textContent = `Next meeting: ${data.nextmeeting}`;
     
+    //updatePbar();
+
+    for (let i = 0; i < data.upcomingevents.length; i++) {
+        var ev = data.upcomingevents[i];
+        addEventRow(ev.time, ev.title, ev.description);
+    }
+}
+
+function updatePbar() {
     var totalraised = 0;
     for (let i = 0; i < data.earnings.length; i++) {
         totalraised += data.earnings[i].amount;
@@ -31,12 +40,7 @@ function updateContent() {
     }
 
     document.getElementsByClassName("progressbartext")[0].textContent = `$${totalraised} raised / $${data.goal}`;
-    document.body.style.setProperty("--progressbarprogress", ((totalraised / data.goal) * 100) + "%")
-
-    for (let i = 0; i < data.upcomingevents.length; i++) {
-        var ev = data.upcomingevents[i];
-        addEventRow(ev.time, ev.title, ev.description);
-    }
+    document.body.style.setProperty("--progressbarprogress", ((totalraised / data.goal) * 100) + "%");
 }
 
 function addBreakdownEntry(amount, source) {
