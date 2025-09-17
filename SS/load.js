@@ -1,4 +1,4 @@
-const datapath = "https://raw.githubusercontent.com/GesChen/clubdata/refs/heads/main/ddsc.json";
+const datapath = "https://raw.githubusercontent.com/dolphindashsc/data/refs/heads/main/data.json";
 var data;
 var windowloaded = false;
 
