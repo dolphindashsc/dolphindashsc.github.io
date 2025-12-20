@@ -51,6 +51,12 @@
     
     text-shadow: 2px 2px 5px var(--primary-dark);
 
+    color: white;
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    mix-blend-mode: difference;
+
     padding: 2vw;
 }
 

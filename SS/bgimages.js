@@ -7,8 +7,11 @@ setInterval(() => {
 }, changeInterval);
 
 function randomizebg() {
-    const bg = document.getElementsByClassName("titlecontainer")[0];
     var src = loadedimages[Math.floor(Math.random() * loadedimages.length)];
+    loadbg(src);
+}
+function loadbg(src) {
+    const bg = document.getElementsByClassName("titlecontainer")[0];
     bg.style.backgroundImage = `url("${src}")`;
 }
 
@@ -20,9 +23,15 @@ const loadBackgroundImages = async () => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const backgroundImages = await response.json();
+        
+        var count = 0;
 
         const loadImage = (src) => {
             return new Promise((resolve, reject) => {
+                count++;
+                if (count == 1) 
+                    loadbg(src);
+
                 const img = new Image();
                 img.onload = () => resolve(img);
                 img.onerror = () => reject(new Error(`Failed to load image: ${src}`));
