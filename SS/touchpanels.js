@@ -2,6 +2,8 @@
 const dragOverThreshold = 100;
 const smoothness = 0.2;
 const targetFrameRate = 60;
+const headerTranslateCoef = .4;
+const headerScaleCoef = .0003;
 
 // Variables
 let dragging = false;
@@ -10,6 +12,7 @@ let curY = 0;
 let dragStartX = 0;
 let dragStartY = 0;
 let panels;
+let headers;
 let navIcons;
 let dragStartTargetX = 0;
 let targetX = 0;
@@ -22,6 +25,7 @@ window.addEventListener("load", () => {
     requestAnimationFrame(recalculatePositions);
 
     panels = document.getElementsByClassName("eventitem");
+    headers = document.getElementsByClassName("eventheader");
     navIcons = document.getElementsByClassName("eventnavitem");
     updatesizes();
 
@@ -143,8 +147,13 @@ function recalculatePositions() {
     for (let i = 1; i < panels.length + 1; i++) {
         let xPos = mod((realX + width * i), (panels.length * width)) - width;
         panels[i - 1].style.left = xPos + "px";
-        panels[i - 1].style.width = width + "px";
+        // panels[i - 1].style.width = width + "px";
         
+        let trans = xPos * headerTranslateCoef;
+        let scale = 1 - Math.abs(xPos) * headerScaleCoef;
+        headers[i - 1].style.transform = `translateX(${trans}px) scale(${scale})`;
+
+
         let opacity = 0;
         let offX = xPos - midpoint + width / 2; 
         if (offX < -width || offX > width) {

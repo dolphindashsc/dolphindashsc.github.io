@@ -44,72 +44,59 @@ function updatePbar() {
 }
 
 function addBreakdownEntry(amount, source) {
-    // Create the main div
     const entryDiv = document.createElement('div');
     entryDiv.className = 'breakdownentry';
   
-    // Create and append the amount div
     const amountDiv = document.createElement('div');
     amountDiv.className = 'breakdownamount';
     amountDiv.textContent = "$"+amount;
     entryDiv.appendChild(amountDiv);
   
-    // Create and append the source div
     const sourceDiv = document.createElement('div');
     sourceDiv.className = 'breakdownsource';
     sourceDiv.textContent = source;
     entryDiv.appendChild(sourceDiv);
   
-    // Append the entry div to the target div
     const targetDiv = document.getElementsByClassName('breakdown')[0];
     targetDiv.appendChild(entryDiv);
 }
 
 function addEventRow(time, title, description) {
-    // Create the main tr element
     const tr = document.createElement('tr');
     tr.className = 'eventcontainer';
 
-    // Create the td element
     const td = document.createElement('td');
 
-    // Create the event div
     const eventDiv = document.createElement('div');
     eventDiv.className = 'event';
 
-    // Create and append the event time span
-    const timeSpan = document.createElement('span');
-    timeSpan.className = 'eventtime';
-    timeSpan.textContent = time;
-    eventDiv.appendChild(timeSpan);
+    const eventHeader = document.createElement('div');
+    eventHeader.className = 'eventitemheader';
 
-    // Create and append the event title span
     const titleSpan = document.createElement('span');
     titleSpan.className = 'eventtitle';
     titleSpan.textContent = title;
-    eventDiv.appendChild(titleSpan);
+    eventHeader.appendChild(titleSpan);
 
-    // Create and append the event description span
+    const timeSpan = document.createElement('span');
+    timeSpan.className = 'eventtime';
+    timeSpan.textContent = time;
+    eventHeader.appendChild(timeSpan);
+
+    eventDiv.appendChild(eventHeader);
+
     const descSpan = document.createElement('span');
     descSpan.className = 'eventdescription';
-    descSpan.innerHTML = description;
+    descSpan.innerHTML = '° ' + description;
     eventDiv.appendChild(descSpan);
 
-    // Append the event div to the td
     td.appendChild(eventDiv);
 
-    // Append the td to the tr
     tr.appendChild(td);
 
-    // Find the container div by class name
     const containerDiv = document.querySelector('.upcomingevents');
-
-    // Find the table inside the container div
     const table = containerDiv.querySelector('table');
-
-    // Find the tbody of the table
     const tbody = table.querySelector('tbody');
 
-    // Append the new tr to the tbody
     tbody.appendChild(tr);
 }

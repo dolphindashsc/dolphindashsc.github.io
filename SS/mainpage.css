@@ -5,25 +5,24 @@
     left: 50%; 
     transform: translateX(-50%);
     
+    font-weight: 600;
     text-decoration: none;
-    color: var(--primary-dark);
+    color: var(--accent);
 
-    background: var(--primary-tint);
+    background: var(--primary);
 
-    /* border: 3px double var(--primary-dark); */
-    border-radius: 0 0 var(--main-radius) var(--main-radius);
-    box-shadow: 5px 5px 10px -5px var(--primary-dark);
+    box-shadow: 0 0 0 2px var(--accent);
 
     transition: all .1s ease-out;
+
+    border-radius: 0 0 var(--global-radius) var(--global-radius);
 }
 .signupbutton {
-    padding: 10px 20px;
-    
+    padding: 0 15px 5px 15px;
 }
 .signuptab:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 15px var(--primary-dark);
-    background: var(--primary-color);
+    box-shadow: 0 0 2px 2px var(--accent);
     transform: translateX(-50%) scale(1.05);
 }
 
@@ -47,15 +46,20 @@
     line-height: 10vh;
     font-weight: 600;
     letter-spacing: 2px;
-    color: var(--primary-color);
     
-    text-shadow: 2px 2px 5px var(--primary-dark);
+    --outlinesize: 2px;
+    --outlinenegt: calc(var(--outlinesize) * -1);
 
+    text-shadow: 
+        var(--outlinenegt) var(--outlinenegt) 0 var(--accent),
+        var(--outlinenegt) var(--outlinesize) 0 var(--accent),
+        var(--outlinesize) var(--outlinenegt) 0 var(--accent),
+        var(--outlinesize) var(--outlinesize) 0 var(--accent) ;
     color: white;
     
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    mix-blend-mode: difference;
+    mix-blend-mode: difference; */
 
     padding: 2vw;
 }
@@ -74,14 +78,12 @@
 
 .progressbarmain {
     width: 100%;
-    height: fit-content;
 }
-
 
 .progressbarcontainer {
     width: 100%;
     height: 40px;
-    background-color: var(--progressbarsecondary);
+    /* background-color: var(--accent); */
     position: relative;
 
     box-shadow: 0 4px 10px rgba(0,0,0,.1);
@@ -94,7 +96,7 @@
     
     width: var(--progressbarprogress);
     height: 100%;
-    background-color: var(--progressbarprimary);
+    background-color: var(--accent);
 }
 
 .progressbartextcontainer {
@@ -105,7 +107,7 @@
     position: absolute;
     width: 100%;
 
-    background: linear-gradient(90deg, var(--progressbarsecondary) var(--progressbarprogress), var(--progressbarprimary) var(--progressbarprogress));
+    background: linear-gradient(90deg, var(--primary) var(--progressbarprogress), var(--accent) var(--progressbarprogress));
     background-clip: text;
     -webkit-background-clip: text;
 }
@@ -178,7 +180,6 @@
     height: fit-content;
     box-sizing: border-box;
     margin: 5vh 0 10vh 0;
-    padding: 0 2vw;
 }
 
 @media (min-width:768px) {
@@ -190,48 +191,97 @@
 
 .clubdescription {
     display: flex;
-    font-size: var(--mediumtextsize);
-    font-weight: 500;
-    line-height: calc(var(--mediumtextsize) + 10px);
+    flex-direction: column;
+}
+
+.descriptiontitle {
+    font-family: "Shrikhand", serif;
+    font-size: var(--font-size-1);
+    font-weight: 800;
+
+    color: var(--accent);
+    padding-left: 15px;
+
+    flex: 1;
+}
+
+.descriptiontitle span {
+    padding-bottom: 10px;
+
+    display: inline-block;
+}
+
+.descriptiontext {
+    line-height: calc(var(--font-size-2) + 20px);
+    flex: 4;
     text-align: center;
-    align-items: center;
-    padding: 5px 35px 15px 35px;
+
+    font-size: var(--font-size-2);
+
+    display: grid;
+    place-items: center;
+
+    padding: 0 50px;
+}
+
+#descbreak {
+    width: 200px;
+    transform: translateX(30px);
+    outline: 1px dashed var(--secondary-0);
 }
 
 .upcomingevents {
     height: 100%;
     overflow: auto;
-    border: 3px transparent var(--primary-tint2);
-    border-radius: 10px;
+    border-top: 2px dashed var(--secondary-2);
+    border-left: 2px dashed var(--secondary-2);
+    border-bottom: 2px dashed var(--secondary-2);
     padding: 10px 15px;
 
-    background-color: var(--primary-dark);
+    background-color: var(--secondary-3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: var(--global-radius) 0 0 var(--global-radius);
+}
+
+.upcomingtitle {
+    position: relative;
+    display: inline-block;
+    font-size: var(--font-size-2);
+    font-weight: 700;
+    text-align: center;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 5px 10px;
+
+    /* background-color: var(--primary); */
+    background-color: var(--secondary-4);
+
+    border-radius: var(--global-radius);
+
+    color: var(--accent);
 }
 
 .upcomingevents table {
     width: 100%;
     height: 30vh;
-}
-.upcomingtitle {
-    position: relative;
-    display: block;
-    font-size: var(--mediumtextsize);
-    font-weight: 400;
-    text-align: center;
-    margin: 10px 0;
 
-    color: var(--primary-color);
+    margin-top: 10px;
+    flex: 1;
 }
+
 .upcomingevents tbody {
     display: block;
     overflow: auto;
     height: 30vh;
 }
-.upcomingevents tbody tr:nth-child(odd){
-    background-color: var(--primary-tint);
-}
-.upcomingevents tbody tr:nth-child(even){
-    background-color: var(--primary-tint2);
+.upcomingevents tr{
+    background-color: var(--secondary-2);
 }
 
 .fixedbutton {
@@ -290,4 +340,13 @@
 .joindesc {
     width: 100%;
     text-align: center;
+}
+
+hr {
+    width: 90vw;
+    border: none;
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, transparent, var(--accent), transparent);
 }

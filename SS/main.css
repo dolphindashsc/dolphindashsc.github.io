@@ -1,57 +1,42 @@
 :root {
-    --global-hue: 222;
+    --primary: #2e354b;
+    --accent: #f1c552;
 
-    --primary-color: hsl(var(--global-hue), 100%, 98%);
-    --primary-tint: hsl(var(--global-hue), 83%, 91%);
-    --primary-tint2: hsl(var(--global-hue), 76%, 87%);
-    --primary-dark: hsl(var(--global-hue), 9%, 19%);
-    --main-radius: 20px;
-    --sidepadding: 7vw;
-    --smallertextsize: 15px;
-    --normaltextsize: 20px;
-    --mediumertextsize: 23px;
-    --mediumtextsize: 30px;
-    --largertextsize: 40px;
+    --secondary-0: #5c76a8;
+    --secondary-1: #8baced;
+    --secondary-2: #c8d8fc;
+    --secondary-3: #7b93c2;
+    --secondary-4: #2c4066;
     
-    --light-primary-color: hsl(var(--global-hue), 100%, 99%);
-    --light-primary-tint: hsl(var(--global-hue), 100%, 90%);
-    --light-primary-dark: hsl(var(--global-hue), 9%, 19%);
-    
-    /*
-    --dark-primary-color: hsl(var(--global-hue), 100%, 10%);
-    --dark-primary-tint: hsl(var(--global-hue), 100%, 15%);
-    --dark-primary-dark: hsl(60, 100%, 97%);
-    */
+    --highlight: #fff;
+
+    --font-size-1: 34px;
+    --font-size-2: 23px;
+    --font-size-3: 19px;
+    --font-size-4: 16px;
+
+    --global-radius: 5px;
 
     --progressbarprogress: 100%;
-    --progressbarsize: 95vw;
-    --progressbarprimary: #f77;
-    --progressbarsecondary: #b2c9f8;
     --eventsmaxheight: 100px;
 }
 
 body {
     margin: 0;
 
-    font-family: "Bahnschrift", sans-serif;
-    src: url("resources/bahnschrift.ttf");
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    letter-spacing: .3px;
-    line-height: 30px;
-    font-size: var(--normaltextsize);
-    color: var(--primary-dark);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 
     overflow-x: hidden;
 
-    background-color: var(--primary-color);
-}
-
-hr {
-    width: 95%;
+    background-color: var(--primary);
 }
 
 html {
     overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../resources/Montserrat-VariableFont_wght.ttf") format("truetype");
 }

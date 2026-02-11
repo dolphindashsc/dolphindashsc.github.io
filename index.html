@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/> -->
+    <!-- <meta http-equiv="Pragma" content="no-cache"/> -->
+    <!-- <meta http-equiv="Expires" content="0"/> -->
     <title>Dolphin Dash Student Crew</title>
     <link rel="icon" type="image/x-icon" href="resources/ddsc logo-1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="SS/main.css">
     <link rel="stylesheet" href="SS/mainpage.css">
@@ -20,7 +24,7 @@
 <body>
     <a class="signuptab" style="left:35%" href="https://runsignup.com/Race/VA/VirginiaBeach/DolphinDash5kVA" target="_blank">
         <div class="signupbutton">
-            <span>Sign Up for the Race</span>
+            <span>Sign up for the race</span>
         </div>
     </a>
      <a class="signuptab" style="left:65%" target="_blank" href="https://vbschools.schoolcashonline.com/Fee/Details/25825/247/False/True">
@@ -55,12 +59,28 @@
     </div>
     <div class="topinfocontainer">
         <div class="clubdescription">
-            <span>
-                Dolphin Dash Student Crew (DDSC) is a student-run organization at Ocean Lakes High School where students plan, organize, and host events to raise money for a local charity each year.
-            </span>
+            <div class="descriptiontitle">
+                <span>
+                    Who are we?
+                </span>
+                <div id="descbreak"></div>
+            </div>
+            <div class="descriptiontext">
+                <div>
+                    <span style="color: var(--secondary-1)">
+                        Dolphin Dash Student Crew (DDSC) 
+                    </span>
+                    <span style="color: var(--highlight)">
+                        is a student-run organization at Ocean Lakes High School where students plan, organize, and
+                    </span>
+                    <span style="color: var(--secondary-2)">
+                        host events to raise money for a local charity each year.
+                    </span>
+                </div>
+            </div>
         </div>
         <div class="upcomingevents">
-            <span class="upcomingtitle">Upcoming Events</span>
+            <span class="upcomingtitle">.˚○ • ° Upcoming Events.˚○ • ° </span>
             <table>
                 <tbody>
                 </tbody>
@@ -70,13 +90,13 @@
     <hr>
     <div class="eventscontainer">
         <div class="eventnavarrow" id="eventnavarrowleft">
-            <svg width="20" height="50" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="15,3 4,25 15,45" fill="none" stroke-width="6" stroke="var(--primary-dark)" stroke-linecap="round"></polyline>
+            <svg width="30" height="50" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="20,3 5,25 20,45" fill="none" stroke-width="6" stroke="var(--primary-dark)" stroke-linecap="round"></polyline>
             </svg>
         </div>
         <div class="eventnavarrow" id="eventnavarrowright">
-            <svg width="20" height="50" xmlns="http://www.w3.org/2000/svg">
-                <polyline points="4,3 15,25 4,45" fill="none" stroke-width="6" stroke="var(--primary-dark)" stroke-linecap="round"></polyline>
+            <svg width="30" height="50" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="5,3 20,25 5,45" fill="none" stroke-width="6" stroke="var(--primary-dark)" stroke-linecap="round"></polyline>
             </svg>
         </div>
         <span class="eventstitle">Main Events</span>
@@ -84,7 +104,7 @@
             <div class="eventscontentscontainer">
                                 <div class="eventitem" id="winter">
                     <div class="eventiteminner">
-                        <div class="eventheader">Winter Carnival</div>
+                        <div class="eventheader">- Winter Carnival -</div>
                         <div class="eventdate">Friday, January 16, 2026 from 5-7 PM</div>
                         <div class="eventcontent">
                             <div class="eventtext">
@@ -108,7 +128,7 @@
                 </div>
                 <div class="eventitem" id="fivek">
                     <div class="eventiteminner">
-                        <div class="eventheader">5K Race</div>
+                        <div class="eventheader">- 5K Race -</div>
                         <div class="eventdate">Saturday, May 16, 2026</div>
                         <p>
                             Our 20th annual 5K race! Taking place after a year of hard work and fundraising, the 5K is our main event. There will be snacks, music, and so much more to add on to the race. <!--todo add some more, significantly shorter than the others atm-->
@@ -119,7 +139,7 @@
                 </div>
                 <div class="eventitem" id="minidash">
                     <div class="eventiteminner">
-                        <div class="eventheader">Mini Dash</div>
+                        <div class="eventheader">- Mini Dash -</div>
                         <div class="eventdate">Saturday, May 16, 2026</div>
                         <p>
                             Know anyone interested in participating in a race as an elementary schooler? Check out our Mini-Dash! Not only is it a fun opportunity for kids to exercise, but it also allows them to help donate to a charity! 
@@ -128,7 +148,7 @@
                 </div>
                 <div class="eventitem" id="talent">
                     <div class="eventiteminner">
-                        <div class="eventheader">Talent Show</div>
+                        <div class="eventheader">- Talent Show -</div>
                         <div class="eventdate">Date TBD</div>
                         <p>
                             In collaboration with Ocean Lakes Theater Company, the Dolphin Dash Student Crew is hosting a talent show for Ocean Lakes High School students! Come show off your talents at a fun event highlighting the diverse abilities of our student body. </p>
@@ -151,10 +171,5 @@
         <div class="jointitle">Want to join us?</div>
         <div class="joindesc">We meet most Wednesdays afterschool from 2-5 PM in room 252.<br>Contact Mrs.Hall if you want to learn more.</div>
 </div-->
-    <footer>
-        <div class="footercontainer">
-            
-        </div>
-    </footer>
 </body>
 </html>
